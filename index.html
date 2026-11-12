@@ -91,7 +91,11 @@ main{padding:var(--s7) 0 0;max-width:700px;min-width:0}
 .lede{font-size:var(--t-lg);line-height:1.45;font-weight:500;letter-spacing:-.02em;margin:0 0 var(--s5)}
 .prose p{margin:0 0 var(--s4);color:var(--ink-2)}
 .prose strong,.project strong{color:var(--ink);font-weight:600}
-.interests{margin:var(--s5) 0 0;color:var(--ink-3);font-size:var(--t-sm)}
+.interests{margin:0 0 var(--s6);padding:var(--s4) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.interests-label{margin:0 0 var(--s2);font-size:var(--t-xs);font-weight:600;color:var(--accent)}
+.interests ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s1) 0;
+  font-size:var(--t-base);font-weight:600;color:var(--ink);line-height:1.5}
+.interests li:not(:last-child)::after{content:"·";margin:0 var(--s3);color:var(--ink-3);font-weight:400}
 
 section{padding-top:var(--s9)}
 h2{font-size:var(--t-lg);font-weight:700;letter-spacing:-.025em;line-height:1.25;margin:0 0 var(--s6)}
@@ -137,6 +141,7 @@ h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
 .award{color:var(--accent);font-weight:600}
 
 /* contact */
+.contact-lead{margin:-12px 0 var(--s5);color:var(--ink-2)}
 .contact{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s7);align-items:end}
 .contact-mail{display:inline-flex;align-items:center;gap:var(--s3);font-size:var(--t-lg);font-weight:600;
   letter-spacing:-.02em;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
@@ -275,12 +280,12 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 
 <section id="about" style="padding-top:0">
   <p class="lede">I study how social experiences and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative diseases.</p>
+  <div class="interests"><p class="interests-label">Research interests</p><ul><li>Social Neuroscience</li><li>Developmental Neuroscience</li><li>Cognitive Reserve</li><li>Brain Aging &amp; Alzheimer’s</li><li>Multimodal Neuroimaging</li></ul></div>
   <div class="prose">
     <p>What first fascinated me about sociology was how our thoughts and behaviors are shaped not only by individual characteristics, but also by <strong>the relationships and environments around us</strong>. As I studied social networks, I became increasingly curious about how such relationships and experiences influence individuals. This led me to a broader question: <strong>why do people think and respond differently, even when they are in similar environments?</strong></p>
     <p>That curiosity prompted me to <strong>expand my research into neuroscience</strong>. While sociology taught me to understand people within their social contexts, neuroscience offered new ways to investigate the neural processes associated with these experiences and individual differences. I see the two fields not as separate paths, but as <strong>complementary perspectives</strong> that together offer a more complete understanding of human behavior.</p>
     <p>By <strong>combining large-scale neuroimaging cohort analyses with behavioral and fMRI experiments</strong>, I aim to connect different types of data and disciplinary perspectives to explore relationships that might be difficult to uncover through any single approach.</p>
   </div>
-  <p class="interests">Social Neuroscience · Developmental Neuroscience · Cognitive Reserve · Brain Aging &amp; Alzheimer’s · Multimodal Neuroimaging</p>
 </section>
 
 <section id="current">
@@ -331,11 +336,11 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 
   <div class="year"><div class="y">2025</div><ul class="talks">
     <li><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3>
-      <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea · Nov 2025 · Poster · <span class="award">Award</span></p></li>
+      <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea · Nov 2025 · Poster · <span class="award">Award of Excellence (Poster)</span></p></li>
     <li><h3>Network and Gene Shape Emotional Distress to Social Exclusion</h3>
       <p>2025 Sunbelt — International Network for Social Network Analysis Conference · Paris, France · Jun 2025 · International, Oral</p></li>
     <li><h3>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</h3>
-      <p>24th National Sociology Graduate Student Conference · Seoul, Korea · Feb 2025 · Oral · <span class="award">Award</span></p></li>
+      <p>24th National Sociology Graduate Student Conference · Seoul, Korea · Feb 2025 · Oral · <span class="award">Award of Excellence</span></p></li>
   </ul></div>
 
   <div class="year"><div class="y">2024</div><ul class="talks">
@@ -349,7 +354,7 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
     <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
       <p>Korean Sociological Association 2023 Winter Conference · Seoul, Korea · Dec 2023 · Oral</p></li>
     <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
-      <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea · Dec 2023 · Oral · <span class="award">Award</span></p></li>
+      <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea · Dec 2023 · Oral · <span class="award">Award of Excellence</span></p></li>
   </ul></div>
 </section>
 
@@ -420,10 +425,6 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
     <h3>Research Assistant</h3>
     <p>Social Network &amp; Neuroscience (SNN) Lab, Yonsei University · Seoul, Korea</p>
     <ul><li>Korean Study of Adolescent Health (KSAH) project</li><li>Korean Social Life, Health, and Aging Project (KSHAP)</li></ul></div></div>
-  <div class="row"><div class="date">Jun 2024 – Aug 2024</div><div>
-    <h3>Summer Internship Program</h3>
-    <p>NORC at the University of Chicago · Chicago, USA</p>
-    <ul><li>National Social Life, Health, and Aging Project (NSHAP)</li></ul></div></div>
   <div class="row"><div class="date">Sep 2023 – Oct 2023</div><div>
     <h3>Research Assistant</h3>
     <p>Korean Women’s Development Institute · Seoul, Korea</p>
@@ -434,7 +435,8 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 </section>
 
 <section id="contact">
-  <h2>Get in touch about collaborations or data</h2>
+  <h2>Contact</h2>
+  <p class="contact-lead">For collaborations, data, or questions about my work, please reach out by email.</p>
   <div class="contact">
     <div>
       <a class="contact-mail" href="mailto:yeonjinchoi@kaist.ac.kr"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>yeonjinchoi@kaist.ac.kr</a>
