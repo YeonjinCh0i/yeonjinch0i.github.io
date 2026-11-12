@@ -3,76 +3,431 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yeonjin Choi | Social Neuroscience</title>
-<meta name="description" content="Yeonjin Choi — social neuroscience, multimodal neuroimaging, development and brain aging at KAIST and KBRI.">
+<title>Yeonjin Choi · 최연진</title>
+<meta name="description" content="Yeonjin Choi is a master's student at KAIST and a researcher at the Korea Brain Research Institute, studying how social experience and brain organization relate to cognition across the lifespan.">
+<meta property="og:title" content="Yeonjin Choi · 최연진">
+<meta property="og:description" content="Social and developmental neuroscience, brain aging, multimodal neuroimaging. KAIST · KBRI.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://yeonjinch0i.github.io/">
+<meta property="og:image" content="https://yeonjinch0i.github.io/assets/portrait.png">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232350c8'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='700' font-size='17' text-anchor='middle' fill='%23fff'%3EYC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-:root{--bg:#fff;--alt:#f5f6fa;--panel:#fff;--text:#1b2130;--muted:#586273;--faint:#7c879a;--navy:#24446b;--line:#e1e5ed;--soft:#eef3fa;font-family:Arial,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color-scheme:light}
-@media(prefers-color-scheme:dark){:root{--bg:#161a22;--alt:#1c222c;--panel:#222936;--text:#eef2fa;--muted:#b9c5d5;--faint:#97a2b4;--navy:#a1bfe6;--line:#394453;--soft:#2b3748;color-scheme:dark}}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--bg);color:var(--text);line-height:1.6}a{color:var(--navy)}button{font:inherit}.wrap{width:min(1140px,92%);margin:auto}nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}.brand{font-size:18px;font-weight:700}.brand small{color:var(--text);font-size:13px;margin-left:10px;font-weight:700}.menu{display:flex;gap:8px;flex-wrap:wrap}.menu a{font-size:13px;color:var(--muted);text-decoration:none;padding:8px 7px}.menu a:hover{color:var(--navy)}.mobile-menu{display:none;background:none;color:var(--text);border:1px solid var(--line);padding:6px 11px;border-radius:6px}
-.hero{border-bottom:1px solid var(--line)}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px;padding:62px 0}.intro{min-width:0}.intro-top{display:flex;align-items:center;gap:24px}.portrait{width:135px;height:160px;object-fit:cover;object-position:center 46%;border-radius:3px;box-shadow:0 10px 25px #15243c22;flex:none}.intro h1{font-size:clamp(30px,4vw,48px);line-height:1.1;margin:0}.intro .korean{font-weight:700;color:var(--text);margin:8px 0 0}.affil{margin:22px 0}.affil-item{border-left:2px solid var(--line);padding-left:15px;margin-bottom:16px}.affil-role{font-size:14px;color:var(--text)}.affil-lab{color:var(--muted);font-size:13px}.affil-lab a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--faint)}.cta{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;padding:10px 15px;border-radius:7px;font-size:14px;font-weight:700}.primary{background:#24446b;color:white}.ghost{border:1px solid var(--line);color:var(--text)}
-.brainviz{position:relative;min-width:0}.brainviz svg{width:100%;height:auto;overflow:visible}.brainviz .edges{stroke:#2e689f;stroke-width:1.7;opacity:.4}.brainviz .edges line{animation:glow 3.2s ease-in-out infinite alternate}.brainviz .nodes circle{fill:#f6ffff;stroke:#4279ac;stroke-width:2;filter:drop-shadow(0 0 3px #6fa9dc);transform-box:fill-box;transform-origin:center;animation:pulse 2.7s ease-in-out infinite alternate}.brainviz .nodes circle:nth-child(2n){animation-delay:-1s}.brainviz .nodes circle:nth-child(3n){animation-delay:-2s}@keyframes pulse{from{transform:scale(.65);opacity:.5}to{transform:scale(1.45);opacity:1}}@keyframes glow{from{opacity:.18}to{opacity:.85}}
-section{padding:60px 0;border-bottom:1px solid var(--line)}section.alt{background:var(--alt)}h2{font-size:25px;letter-spacing:-.02em;line-height:1.2;margin:0 0 10px}.sub{margin:0 0 25px;color:var(--faint)}.prose{max-width:860px;color:var(--muted);font-size:16px;line-height:1.9}.prose p{margin:0 0 16px}.prose strong{color:var(--text)}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card,.pub,.award-card,.scholar{border:1px solid var(--line);background:var(--panel);padding:22px;border-radius:12px}.card h3,.pub h3,.scholar h3{margin:7px 0 4px;font-size:17px;line-height:1.4}.card .inst,.row .org,.pub .authors,.pub .venue,.scholar p{color:var(--muted);margin:5px 0}.card ul{margin:8px 0;padding-left:20px;color:var(--muted)}.card .desc{color:var(--muted);margin:7px 0}.pill{display:inline-block;font-size:12px;font-weight:700;color:var(--navy);background:var(--soft);padding:4px 10px;border-radius:50px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.chip{border:1px solid var(--line);padding:7px 13px;border-radius:40px;font-size:13px}.rows{display:flex;flex-direction:column}.row{display:grid;grid-template-columns:160px 1fr;gap:20px;border-top:1px solid var(--line);padding:20px 0}.row:first-child{border-top:0}.when{color:var(--faint);font-size:13px}.where{display:block;color:var(--navy);font-weight:700}.row h3{font-size:17px;margin:0}.row p{margin:3px 0}.row ul{margin:7px 0;padding-left:18px;color:var(--muted)}.meta{color:var(--faint)}.thesis{font-style:italic;color:var(--muted);border-left:2px solid var(--line);padding-left:10px;margin-top:12px!important}.talk{display:grid;grid-template-columns:100px 1fr 110px;gap:18px;border-top:1px solid var(--line);padding:18px 0}.talk:first-child{border-top:0}.talk .venue{font-weight:700;margin:0 0 5px}.talk .title,.talk .loc{color:var(--muted);margin:0}.talk .loc{font-size:13px;color:var(--faint);margin-top:5px}.tags{display:flex;flex-direction:column;align-items:stretch;gap:5px}.tag{font-size:11px;font-weight:700;min-width:90px;text-align:center;padding:4px 7px;border:1px solid var(--line);border-radius:5px;color:var(--navy);background:var(--soft)}
-/* Presentation tags use distinct, accessible colors and a common size. */
-.tag.international{background:#e8f1fd;color:#244e82;border-color:#c8dbf5}
-.tag.poster{background:#f0eafb;color:#5b408b;border-color:#d9c9f1}
-.tag.oral{background:#e6f6f1;color:#19675c;border-color:#bde2d7}
-.tag.award{background:#fff3df;color:#805200;border-color:#f3d59e}
-@media(prefers-color-scheme:dark){
- .tag.international{background:#263b56;color:#c8e0ff;border-color:#45678e}
- .tag.poster{background:#372d4f;color:#e0d0ff;border-color:#675586}
- .tag.oral{background:#1e443e;color:#b6ebdf;border-color:#3d7066}
- .tag.award{background:#4d3b20;color:#ffe3ad;border-color:#8b6b37}
-}.pubs{display:grid;gap:14px}.pub .authors{font-size:14px}.pub .venue{font-size:14px}.pub a{text-decoration:none}.pub-sub{font-size:18px;margin:28px 0 13px}.award-card{display:grid;grid-template-columns:125px 1fr;gap:20px;margin-bottom:12px;border-left:3px solid var(--navy)}.award-card .name{font-weight:700;color:var(--navy);margin:0}.award-card .venue{font-weight:600;margin:5px 0}.award-card .title{margin:3px 0;color:var(--muted);font-size:14px}.scholarships{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.scholar p{font-size:14px}.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px}.contact-links{display:grid;gap:10px;margin:20px 0}.contact-links a{overflow-wrap:anywhere}.lab-links{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}.qr-card{justify-self:start;background:white;color:#202635;border:1px solid #e0e3ea;border-radius:12px;padding:22px;text-align:center;max-width:250px}.qr-card canvas{width:188px;height:188px;max-width:100%;display:block}.qr-card button{background:#24446b;color:white;border:0;border-radius:6px;padding:8px 14px;cursor:pointer}footer{color:var(--faint);font-size:13px;padding:27px 0}footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media(max-width:880px){.hero-grid{grid-template-columns:1fr}.brainviz{max-width:500px;margin:auto}.menu{display:none}.mobile-menu{display:block}.menu.open{display:flex;position:absolute;top:65px;left:0;right:0;padding:12px 4%;background:var(--bg);border-bottom:1px solid var(--line)}.scholarships{grid-template-columns:1fr}}
-@media(max-width:580px){.intro-top{gap:14px}.portrait{width:105px;height:124px}.intro h1{font-size:29px}.hero-grid{padding:37px 0}.cards,.contact-grid{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:5px}.talk{grid-template-columns:1fr;gap:5px}.tags{flex-direction:row;flex-wrap:wrap}.award-card{grid-template-columns:1fr;gap:5px;padding:16px}section{padding:44px 0}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.brainviz .edges line,.brainviz .nodes circle{animation:none}}
+/* ============ Design tokens ============ */
+:root{
+  /* colour */
+  --bg:#ffffff; --surface:#f5f6f8; --ink:#14171c; --ink-2:#3d434d; --ink-3:#5c6370;
+  --line:#e4e6ea; --accent:#2350c8; --accent-ink:#ffffff; --accent-soft:#edf1fd;
+  /* type scale */
+  --t-xs:13px; --t-sm:14.5px; --t-base:16.5px; --t-md:19px; --t-lg:23px; --t-xl:34px;
+  /* spacing (4pt) */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px; --s9:104px;
+  /* shape: inner radius = outer radius - padding */
+  --r-out:14px; --pad:6px; --r-in:calc(var(--r-out) - var(--pad));
+  --font:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI',Roboto,'Noto Sans KR',sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1115; --surface:#181b21; --ink:#eef0f3; --ink-2:#c3c8d0; --ink-3:#9aa1ad;
+  --line:#272b33; --accent:#8eaaff; --accent-ink:#0f1115; --accent-soft:#1a2236; color-scheme:dark}}
+
+/* ============ Base ============ */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);
+  font-size:var(--t-base);line-height:1.65;letter-spacing:-.006em;
+  -webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);
+  text-decoration-thickness:1.5px;text-underline-offset:3px;
+  transition:color .15s var(--ease),text-decoration-color .15s var(--ease)}
+a:hover{color:var(--accent);text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+::selection{background:var(--accent-soft)}
+.ico{width:1em;height:1em;flex:none;stroke:currentColor;fill:none;stroke-width:1.75;
+  stroke-linecap:round;stroke-linejoin:round}
+
+/* ============ Layout ============ */
+.page{max-width:1140px;margin:0 auto;padding:0 var(--s6);
+  display:grid;grid-template-columns:272px minmax(0,1fr);gap:var(--s8)}
+
+/* ============ Sidebar ============ */
+.side{position:sticky;top:0;align-self:start;
+  padding:var(--s7) 0 var(--s5);display:flex;flex-direction:column;max-height:100vh;overflow-y:auto;scrollbar-width:none}
+.photo{width:176px;aspect-ratio:4/5;border-radius:var(--r-out);overflow:hidden;
+  background:var(--surface);margin:0 0 var(--s5)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;display:block;
+  opacity:0;transition:opacity .5s var(--ease)}
+.photo.loaded img{opacity:1}
+.photo:not(.loaded){animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{background:var(--line)}}
+.name{font-size:var(--t-xl);line-height:1.1;font-weight:700;letter-spacing:-.03em;margin:0}
+.name-kr{font-size:var(--t-md);font-weight:500;color:var(--ink-3);margin:var(--s1) 0 0;letter-spacing:.02em}
+.positions{list-style:none;margin:var(--s5) 0 0;padding:0;font-size:var(--t-sm);line-height:1.5;color:var(--ink-2)}
+.positions li+li{margin-top:var(--s3)}
+.positions strong{display:block;font-weight:600;color:var(--ink)}
+.positions a{color:var(--ink-3)}
+
+.cta{display:inline-flex;align-items:center;gap:var(--s2);margin:var(--s5) 0 0;
+  padding:11px var(--s4);border-radius:10px;background:var(--accent);color:var(--accent-ink);
+  font-size:var(--t-sm);font-weight:600;text-decoration:none;align-self:flex-start;
+  transition:transform .15s var(--ease),box-shadow .15s var(--ease)}
+.cta:hover{color:var(--accent-ink);transform:translateY(-1px);box-shadow:0 6px 18px -8px var(--accent)}
+.cta:active{transform:translateY(0)}
+
+.toc{list-style:none;margin:0;padding:var(--s6) 0 0;font-size:var(--t-sm);line-height:1.9}
+.toc a{text-decoration:none;color:var(--ink-3);display:block;padding-left:var(--s3);
+  border-left:2px solid transparent;transition:color .15s var(--ease),border-color .2s var(--ease)}
+.toc a:hover{color:var(--ink)}
+.toc a.on{color:var(--ink);font-weight:600;border-left-color:var(--accent)}
+
+/* ============ Main ============ */
+main{padding:var(--s7) 0 0;max-width:700px;min-width:0}
+.lede{font-size:var(--t-lg);line-height:1.45;font-weight:500;letter-spacing:-.02em;margin:0 0 var(--s5)}
+.prose p{margin:0 0 var(--s4);color:var(--ink-2)}
+.prose strong,.project strong{color:var(--ink);font-weight:600}
+.interests{margin:var(--s5) 0 0;color:var(--ink-3);font-size:var(--t-sm)}
+
+section{padding-top:var(--s9)}
+h2{font-size:var(--t-lg);font-weight:700;letter-spacing:-.025em;line-height:1.25;margin:0 0 var(--s6)}
+h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
+.group-title{font-size:var(--t-base);font-weight:600;color:var(--ink-3);margin:var(--s7) 0 var(--s4)}
+.muted{color:var(--ink-3)}
+
+/* current projects */
+.projects{display:grid;gap:var(--s6)}
+.project h3{font-size:var(--t-md);letter-spacing:-.015em}
+.project .org{font-size:var(--t-sm);color:var(--ink-3);margin:var(--s1) 0 var(--s2)}
+.project p{margin:0;color:var(--ink-2)}
+
+/* featured publication */
+.feature{display:block;text-decoration:none;color:inherit;background:var(--surface);
+  border-radius:var(--r-out);padding:var(--s5);transition:background .2s var(--ease)}
+.feature:hover{color:inherit;background:var(--accent-soft)}
+.feature .venue{font-size:var(--t-sm);font-weight:600;color:var(--accent);margin:0 0 var(--s2)}
+.feature h3{font-size:var(--t-md);line-height:1.4;letter-spacing:-.015em}
+.feature .authors{font-size:var(--t-sm);color:var(--ink-2);margin:var(--s2) 0 0}
+.feature .authors b,.pubs b{color:var(--ink);font-weight:600}
+.feature .links{display:flex;flex-wrap:wrap;column-gap:var(--s5);row-gap:var(--s1);margin-top:var(--s4);font-size:var(--t-sm)}
+.feature .read{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink);transition:color .15s var(--ease)}
+.feature .read .ico{transition:transform .2s var(--ease)}
+.feature:hover .read{color:var(--accent)}
+.feature:hover .read .ico{transform:translate(2px,-2px)}
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:var(--s5)}
+.pubs .authors{font-size:var(--t-sm);color:var(--ink-3);margin:2px 0 0}
+
+/* dated rows */
+.row{display:grid;grid-template-columns:136px minmax(0,1fr);gap:var(--s5);padding:0 0 var(--s5)}
+.date{font-size:var(--t-sm);color:var(--ink-3);font-variant-numeric:tabular-nums lining-nums;padding-top:1px;white-space:nowrap}
+.row p{margin:2px 0 0;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
+.row ul{margin:var(--s2) 0 0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
+.row ul li::marker{color:var(--ink-3)}
+
+/* talks */
+.year{display:grid;grid-template-columns:136px minmax(0,1fr);gap:var(--s5);margin-bottom:var(--s6)}
+.year .y{font-size:var(--t-sm);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;padding-top:1px}
+.talks{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
+.talks h3{font-weight:500}
+.talks p{margin:2px 0 0;font-size:var(--t-sm);color:var(--ink-3)}
+.award{color:var(--accent);font-weight:600}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s7);align-items:end}
+.contact-mail{display:inline-flex;align-items:center;gap:var(--s3);font-size:var(--t-lg);font-weight:600;
+  letter-spacing:-.02em;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
+.contact-mail .ico{color:var(--accent)}
+.contact-mail:hover{color:var(--accent)}
+.contact-alt{margin:var(--s2) 0 0;color:var(--ink-3);font-size:var(--t-sm)}
+.qr{display:flex;align-items:center;gap:var(--s4)}
+.qr-box{width:104px;height:104px;padding:var(--pad);border-radius:var(--r-out);background:#fff;
+  border:1px solid var(--line);flex:none}
+.qr-box canvas{display:block;width:100%;height:100%;border-radius:var(--r-in)}
+.qr-box.loading{background:var(--surface);animation:pulse 1.4s ease-in-out infinite}
+.qr-box.loading canvas{visibility:hidden}
+.qr-text{font-size:var(--t-xs);color:var(--ink-3);line-height:1.5;max-width:140px}
+.copy{font:inherit;font-weight:600;color:var(--ink);background:none;border:0;padding:0;margin-top:var(--s1);
+  cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.copy:hover{color:var(--accent)}
+.copy .ok{display:none;color:var(--accent)}
+.copy.done .ok{display:inline;animation:pop .35s var(--ease)}
+.copy.done .cp{display:none}
+@keyframes pop{from{transform:scale(.4);opacity:0}}
+
+footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid var(--line);
+  font-size:var(--t-xs);color:var(--ink-3);display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:wrap}
+
+/* ============ Responsive ============ */
+@media (max-width:920px){
+  .page{grid-template-columns:1fr;gap:0;padding:0 20px}
+  .side{position:static;max-height:none;overflow:visible;padding:var(--s7) 0 0}
+  .head{display:flex;gap:var(--s5);align-items:flex-end}
+  .photo{width:120px;margin:0;flex:none;border-radius:12px}
+  .toc{display:none}
+  main{padding-top:var(--s7)}
+  section{padding-top:var(--s8)}
+}
+@media (max-width:560px){
+  :root{--t-base:16px;--t-lg:21px;--t-xl:28px}
+  .photo{width:104px}
+  .row,.year{grid-template-columns:1fr;gap:var(--s1)}
+  .year .y{margin-bottom:var(--s2)}
+  .contact{grid-template-columns:1fr;gap:var(--s6)}
+  .contact-mail{font-size:var(--t-md)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+@media print{.toc,.qr,.cta{display:none}.side{position:static;min-height:0}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><div class="brand">Yeonjin Choi <small>최연진</small></div><button class="mobile-menu" type="button" onclick="document.querySelector('.menu').classList.toggle('open')" aria-label="Toggle menu">☰</button><div class="menu"><a href="#now">Currently</a><a href="#about">About</a><a href="#education">Education</a><a href="#research">Research</a><a href="#talks">Presentations</a><a href="#publications">Publications</a><a href="#awards">Awards</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero"><div class="wrap hero-grid"><div class="intro"><div class="intro-top"><img class="portrait" alt="Portrait of Yeonjin Choi" src="data:image/jpeg;base64,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"><div><h1>Yeonjin Choi</h1><p class="korean">최연진</p></div></div>
-<div class="affil"><div class="affil-item"><div class="affil-role">Master's student at <b>Korea Advanced Institute of Science and Technology (KAIST)</b></div><div class="affil-lab"><a href="http://ibrain.kaist.ac.kr/" target="_blank" rel="noopener">Laboratory for Cognitive Neuroscience and NeuroImaging (CNI)</a></div></div><div class="affil-item"><div class="affil-role">Researcher at the <b>Korea Brain Research Institute (KBRI)</b></div><div class="affil-lab"><a href="https://minyoungjung.com/" target="_blank" rel="noopener">Brain Development Imaging Lab (BDIL)</a></div></div></div><div class="cta"><a class="btn primary" href="#contact">Get in touch</a><a class="btn ghost" href="#now">Current work</a></div></div>
-<div class="brainviz"><svg viewBox="0 0 540 360" role="img" aria-label="Anatomical brain with animated network connections"><image href="data:image/webp;base64,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" x="0" y="0" width="540" height="360"/><g class="edges"><line x1="107" y1="148" x2="168" y2="110"/><line x1="168" y1="110" x2="250" y2="102"/><line x1="250" y1="102" x2="342" y2="108"/><line x1="342" y1="108" x2="414" y2="142"/><line x1="107" y1="148" x2="147" y2="208"/><line x1="147" y1="208" x2="214" y2="252"/><line x1="214" y1="252" x2="295" y2="245"/><line x1="295" y1="245" x2="378" y2="223"/><line x1="378" y1="223" x2="414" y2="142"/><line x1="168" y1="110" x2="224" y2="178"/><line x1="224" y1="178" x2="295" y2="245"/><line x1="250" y1="102" x2="224" y2="178"/><line x1="250" y1="102" x2="336" y2="187"/><line x1="336" y1="187" x2="414" y2="142"/><line x1="336" y1="187" x2="378" y2="223"/><line x1="147" y1="208" x2="224" y2="178"/><line x1="224" y1="178" x2="336" y2="187"/><line x1="295" y1="245" x2="336" y2="187"/></g><g class="nodes"><circle cx="107" cy="148" r="5"/><circle cx="168" cy="110" r="5"/><circle cx="250" cy="102" r="5"/><circle cx="342" cy="108" r="5"/><circle cx="414" cy="142" r="5"/><circle cx="147" cy="208" r="5"/><circle cx="214" cy="252" r="5"/><circle cx="295" cy="245" r="5"/><circle cx="378" cy="223" r="5"/><circle cx="224" cy="178" r="6"/><circle cx="336" cy="187" r="6"/></g></svg></div></div></header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<div class="page">
+
+<aside class="side">
+  <div class="head">
+    <div class="photo"><img src="assets/portrait.png" alt="Yeonjin Choi" width="400" height="500" decoding="async"></div>
+    <div>
+      <h1 class="name">Yeonjin Choi</h1>
+      <p class="name-kr" lang="ko">최연진</p>
+    </div>
+  </div>
+  <ul class="positions">
+    <li><strong>KAIST</strong>M.S. student, Bio and Brain Engineering<br><a href="http://ibrain.kaist.ac.kr/" target="_blank" rel="noopener">Cognitive Neuroscience &amp; NeuroImaging Lab</a></li>
+    <li><strong>Korea Brain Research Institute</strong>Researcher<br><a href="https://minyoungjung.com/" target="_blank" rel="noopener">Brain Development Imaging Lab</a></li>
+  </ul>
+  <a class="cta" href="mailto:yeonjinchoi@kaist.ac.kr"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
+  <nav aria-label="Sections">
+    <ul class="toc">
+      <li><a href="#about">About</a></li>
+      <li><a href="#current">Current projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#presentations">Presentations</a></li>
+      <li><a href="#honors">Awards &amp; scholarships</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Research experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</aside>
+
 <main>
-<section id="now" class="alt"><div class="wrap"><h2>What I'm working on now</h2><p class="sub">Bringing social science and neuroimaging together across development and aging.</p><p class="prose">I study how social experience and brain organization relate to cognition across the lifespan, drawing on social neuroscience, multimodal neuroimaging, and behavioral research.</p><div class="cards"><article class="card"><span class="pill">KAIST</span><h3>Brain aging, Alzheimer's &amp; cognitive reserve</h3><p class="inst">Laboratory for Cognitive Neuroscience and NeuroImaging (CNI)</p><p class="desc">Analyzing ADNI, AABC, and KBASE data with fMRI, DTI, and PET to study brain organization, cognitive aging, and the possible role of social support.</p></article><article class="card"><span class="pill">KBRI</span><h3>Development, emotion &amp; data collection</h3><p class="inst">Brain Development Imaging Lab (BDIL)</p><ul><li>fMRI, surveys, and behavioral experiments with children and caregivers.</li><li>Korean Older Adult Facial Expression Database (KOFED)</li><li>Facial Expression Recognition Task (FERT)</li></ul></article></div></div></section>
-<section id="about"><div class="wrap"><h2>About</h2><div class="prose"><p>What first fascinated me about sociology was how our thoughts and behaviors are shaped not only by individual characteristics, but also by the relationships and environments around us. As I studied social networks, I became increasingly curious about how these relationships and experiences influence individuals. This led me to a broader question: Why do people think and respond differently, even when they are in similar environments?</p><p>That curiosity led me to expand my research into neuroscience. While sociology taught me to understand people within their social contexts, neuroscience offered new ways to investigate the neural processes associated with these experiences and individual differences. I see the two fields not as separate paths, but as complementary perspectives that together offer a more complete understanding of human behavior.</p><p>Today, I study how social experiences and the brain's functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative diseases. By combining large-scale neuroimaging cohort analyses with behavioral and fMRI experiments, I aim to connect different types of data and disciplinary perspectives to explore relationships that might be difficult to uncover through any single approach.</p></div><div class="chips"><span class="chip">Social Neuroscience</span><span class="chip">Developmental Neuroscience</span><span class="chip">Cognitive Reserve</span><span class="chip">Brain Aging &amp; Alzheimer's</span><span class="chip">Multimodal Neuroimaging</span></div></div></section>
-<section id="education" class="alt"><div class="wrap"><h2>Education</h2><div class="rows">
-<div class="row"><div class="when">Mar 2026 – Present<span class="where">Daejeon, Korea</span></div><div><h3>Korea Advanced Institute of Science and Technology (KAIST)</h3><p class="org">Department of Bio and Brain Engineering — Master's student (Expected Feb 2028)</p><p class="meta">Advisor: Yong Jeong</p></div></div>
-<div class="row"><div class="when">Aug 2023 – Aug 2025<span class="where">Seoul, Korea</span></div><div><h3>Yonsei University</h3><p class="org">Department of Sociology — M.A. in Sociology (Integrated Undergraduate &amp; Graduate Program)</p><p class="meta">Advisor: Yoosik Youm</p><p class="thesis">“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
-<div class="row"><div class="when">Mar 2020 – Aug 2023<span class="where">Seoul, Korea</span></div><div><h3>Yonsei University</h3><p class="org">Department of Sociology — B.A. in Sociology</p><p class="meta">Completed Curriculum for Teaching Profession</p></div></div>
-</div></div></section>
-<section id="research"><div class="wrap"><h2>Research experience</h2><div class="rows">
-<div class="row"><div class="when">Mar 2026 – Present<span class="where">Daejeon, Korea</span></div><div><h3>Graduate Researcher</h3><p class="org">Laboratory for Cognitive Neuroscience and NeuroImaging (CNI), KAIST</p></div></div>
-<div class="row"><div class="when">Mar 2026 – Present<span class="where">Daegu, Korea</span></div><div><h3>Student Researcher</h3><p class="org">Brain Development Imaging Lab (BDIL), Korea Brain Research Institute</p><ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Facial Expression Recognition Task (FERT)</li></ul></div></div>
-<div class="row"><div class="when">Oct 2025 – Feb 2026<span class="where">Daegu, Korea</span></div><div><h3>Post-Master Researcher</h3><p class="org">Brain Development Imaging Lab (BDIL), Korea Brain Research Institute</p><ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Digital social cognition tool development (MoodSpy)</li></ul></div></div>
-<div class="row"><div class="when">Jul 2023 – Aug 2025<span class="where">Seoul, Korea</span></div><div><h3>Research Assistant</h3><p class="org">Social Network &amp; Neuroscience (SNN) Lab, Yonsei University</p><ul><li>Korean Study of Adolescent Health (KSAH) project</li><li>Korean Social Life, Health, and Aging Project (KSHAP)</li></ul></div></div>
-<div class="row"><div class="when">Sep 2023 – Oct 2023<span class="where">Seoul, Korea</span></div><div><h3>Research Assistant</h3><p class="org">Korean Women's Development Institute</p><ul><li>Statistical analysis and statistical table presentation</li></ul></div></div>
-<div class="row"><div class="when">May 2021 – Aug 2022<span class="where">Seoul, Korea</span></div><div><h3>Research Assistant</h3><p class="org">Korean Urban Rural Elderly (KURE) project, Yonsei University</p></div></div>
-</div></div></section>
-<section id="talks" class="alt"><div class="wrap"><h2>Conference presentations</h2><div class="talks">
-<div class="talk"><div class="when">Nov 2026</div><div><p class="venue">Society for Neuroscience (SfN) 2026</p><p class="title">Age-dependent coupling between cortical gradient organization and neutral-face representation in children</p><p class="loc">Washington, DC, USA</p></div><div class="tags"><span class="tag international">International</span><span class="tag poster">Poster</span></div></div>
-<div class="talk"><div class="when">Sep 2026</div><div><p class="venue">Korean Society for Brain and Neural Sciences (KSBNS) 2026</p><p class="title">Cortical gradient organization as a neural architecture for neutral-face representation in children</p><p class="loc">Daejeon, Korea</p></div><div class="tags"><span class="tag poster">Poster</span></div></div>
-<div class="talk"><div class="when">Jan 2026</div><div><p class="venue">Korean Society for Cognitive &amp; Biological Psychology 2026 Annual Conference</p><p class="title">Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag poster">Poster</span></div></div>
-<div class="talk"><div class="when">Nov 2025</div><div><p class="venue">Korean Society for Human Brain Mapping 2025 Autumn Conference</p><p class="title">Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag poster">Poster</span><span class="tag award">Award</span></div></div>
-<div class="talk"><div class="when">Jun 2025</div><div><p class="venue">2025 Sunbelt — International Network for Social Network Analysis Conference</p><p class="title">Network and Gene Shape Emotional Distress to Social Exclusion</p><p class="loc">Paris, France</p></div><div class="tags"><span class="tag international">International</span><span class="tag oral">Oral</span></div></div>
-<div class="talk"><div class="when">Feb 2025</div><div><p class="venue">24th National Sociology Graduate Student Conference</p><p class="title">From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag oral">Oral</span><span class="tag award">Award</span></div></div>
-<div class="talk"><div class="when">Jun 2024</div><div><p class="venue">Korean Sociological Association 2024 Summer Conference</p><p class="title">Is More Always Better? The Role of Social Network Size and Closeness in Adolescent Mental Health</p><p class="loc">Pohang, Korea</p></div><div class="tags"><span class="tag oral">Oral</span></div></div>
-<div class="talk"><div class="when">Feb 2024</div><div><p class="venue">23rd National Sociology Graduate Student Conference</p><p class="title">Association of Brain Structure and Making New Friends in the First Year of High School: Evidence from a Girls' High School in South Korea</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag oral">Oral</span></div></div>
-<div class="talk"><div class="when">Dec 2023</div><div><p class="venue">Korean Sociological Association 2023 Winter Conference</p><p class="title">Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag oral">Oral</span></div></div>
-<div class="talk"><div class="when">Dec 2023</div><div><p class="venue">The Korean Association for Survey Research 2023 Autumn Conference</p><p class="title">Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p><p class="loc">Seoul, Korea</p></div><div class="tags"><span class="tag oral">Oral</span><span class="tag award">Award</span></div></div>
-</div></div></section>
-<section id="publications"><div class="wrap"><h2>Publications</h2><div class="pubs"><article class="pub"><span class="pill">Published · 07 July 2026</span><h3>Development and validation of the Korean Child Emotional Face Database for research in developmental neuroscience</h3><p class="authors">Lee, S., Cheong, Y., Ro, J., <b>Choi, Y.</b>, &amp; Jung, M. (2026).</p><p class="venue"><em>Scientific Reports</em> · DOI: <a href="https://doi.org/10.1038/s41598-026-57755-0">10.1038/s41598-026-57755-0</a></p><a href="https://www.nature.com/articles/s41598-026-57755-0" target="_blank" rel="noopener">Read the article ↗</a></article></div><h3 class="pub-sub">Manuscripts in Preparation</h3><div class="pubs"><article class="pub"><span class="pill">In preparation</span><h3>Cortical functional organization relates to children's affective representations of neutral faces</h3><p class="authors"><b>Choi, Y.</b>, Lee, S., Cheong, Y., Jeong, H., Ro, J., Lee, S., Han, J., Jeong, Y., &amp; Jung, M.</p></article><article class="pub"><span class="pill">In preparation</span><h3>More Connected, More Hurt — But Only for Some: Genotype–Network Interactions Heighten Sensitivity to Social Exclusion</h3><p class="authors"><b>Choi, Y.</b>, Lee, S.-H., Kim, H., Chey, J., Parkinson, C., &amp; Youm, Y.</p></article></div></div></section>
-<section id="awards" class="alt"><div class="wrap"><h2>Awards</h2><div class="award-card"><div class="when">Aug 2026<br>Seoul, Korea</div><div><p class="name">Merit Thesis Award</p><p class="venue">Yonsei University Graduate School — Master's thesis</p><p class="title">“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div><div class="award-card"><div class="when">Nov 2025<br>Seoul, Korea</div><div><p class="name">Award of Excellence (Poster)</p><p class="venue">Korean Society for Human Brain Mapping 2025 Autumn Conference</p><p class="title">Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p></div></div><div class="award-card"><div class="when">Feb 2025<br>Seoul, Korea</div><div><p class="name">Award of Excellence</p><p class="venue">24th National Sociology Graduate Student Conference</p><p class="title">From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p></div></div><div class="award-card"><div class="when">Dec 2023<br>Seoul, Korea</div><div><p class="name">Award of Excellence</p><p class="venue">The Korean Association for Survey Research 2023 Autumn Conference</p><p class="title">Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p></div></div></div></section>
-<section id="scholarships"><div class="wrap"><h2>Scholarships</h2><div class="scholarships"><div class="scholar"><h3>National Scholarship Student of KAIST</h3><p>KAIST Graduate School, Daejeon</p><p>Mar 2026 – Present</p></div><div class="scholar"><h3>Brain Korea 21 FOUR Scholarship</h3><p>National Research Foundation of Korea — BK21 FOUR Program, Dept. of Sociology, Yonsei University</p><p>Mar 2024 – Aug 2025</p></div><div class="scholar"><h3>Integrated Undergraduate-and-Graduate Program</h3><p>Yonsei University Graduate School, Seoul</p><p>Aug 2023 – Aug 2025</p></div></div></div></section>
-<section id="contact"><div class="wrap"><h2>Contact</h2><div class="contact-grid"><div><p class="prose">For collaborations, data, or questions about my work, please reach out by email. Scan the code to open or share this page.</p><div class="contact-links"><a href="mailto:yeonjinchoi@kaist.ac.kr">yeonjinchoi@kaist.ac.kr</a><a href="mailto:yeonjinchoi0805@gmail.com">yeonjinchoi0805@gmail.com</a></div><b>Lab pages</b><div class="lab-links"><a href="http://ibrain.kaist.ac.kr/" target="_blank" rel="noopener">CNI Lab · KAIST ↗</a><a href="https://minyoungjung.com/" target="_blank" rel="noopener">BDIL · KBRI ↗</a></div></div><div class="qr-card"><canvas id="qr" width="200" height="200" aria-label="QR code for this website"></canvas><p>Scan to open this page</p><button type="button" id="copy">Copy link</button></div></div></div></section>
+
+<section id="about" style="padding-top:0">
+  <p class="lede">I study how social experience and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative disease.</p>
+  <div class="prose">
+    <p>What first fascinated me about sociology was how our thoughts and behaviors are shaped not only by individual characteristics, but also by <strong>the relationships and environments around us</strong>. As I studied social networks, I became increasingly curious about how such relationships and experiences influence individuals. This led me to a broader question: <strong>why do people think and respond differently, even when they are in similar environments?</strong></p>
+    <p>That curiosity prompted me to <strong>expand my research into neuroscience</strong>. While sociology taught me to understand people within their social contexts, neuroscience offered new ways to investigate the neural processes associated with these experiences and individual differences. I see the two fields not as separate paths, but as <strong>complementary perspectives</strong> that together offer a more complete understanding of human behavior.</p>
+    <p>Today, by <strong>combining large-scale neuroimaging cohort analyses with behavioral and fMRI experiments</strong>, I aim to connect different types of data and disciplinary perspectives to explore relationships that might be difficult to uncover through any single approach.</p>
+  </div>
+  <p class="interests">Social neuroscience · Developmental neuroscience · Cognitive reserve · Brain aging and Alzheimer’s disease · Multimodal neuroimaging</p>
+</section>
+
+<section id="current">
+  <h2>Current projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Social support, brain organization, and cognitive aging</h3>
+      <p class="org">KAIST, Cognitive Neuroscience &amp; NeuroImaging Lab</p>
+      <p>Analyzing <strong>ADNI, AABC, and KBASE</strong> cohorts with fMRI, DTI, and PET to study brain organization in aging and Alzheimer’s disease, cognitive reserve, and the possible role of social support.</p>
+    </div>
+    <div class="project">
+      <h3>How children and older adults read emotional faces</h3>
+      <p class="org">Korea Brain Research Institute, Brain Development Imaging Lab</p>
+      <p>Running fMRI, survey, and behavioral studies with children and caregivers, and building the <strong>Korean Older Adult Facial Expression Database (KOFED)</strong> and the Facial Expression Recognition Task (FERT).</p>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <a class="feature" href="https://www.nature.com/articles/s41598-026-57755-0" target="_blank" rel="noopener">
+    <p class="venue">Scientific Reports, 2026</p>
+    <h3>Development and validation of the Korean Child Emotional Face Database for research in developmental neuroscience</h3>
+    <p class="authors">Lee, S., Cheong, Y., Ro, J., <b>Choi, Y.</b>, &amp; Jung, M.</p>
+    <div class="links"><span class="read">Read article <svg class="ico" aria-hidden="true"><use href="#i-out"/></svg></span><span class="muted">doi:10.1038/s41598-026-57755-0</span></div>
+  </a>
+
+  <p class="group-title">In preparation</p>
+  <ol class="pubs">
+    <li><h3>Cortical functional organization relates to children’s affective representations of neutral faces</h3>
+      <p class="authors"><b>Choi, Y.</b>, Lee, S., Cheong, Y., Jeong, H., Ro, J., Lee, S., Han, J., Jeong, Y., &amp; Jung, M.</p></li>
+    <li><h3>More connected, more hurt—but only for some: Genotype–network interactions heighten sensitivity to social exclusion</h3>
+      <p class="authors"><b>Choi, Y.</b>, Lee, S.-H., Kim, H., Chey, J., Parkinson, C., &amp; Youm, Y.</p></li>
+  </ol>
+</section>
+
+<section id="presentations">
+  <h2>Presentations</h2>
+
+  <div class="year"><div class="y">2026</div><ul class="talks">
+    <li><h3>Age-dependent coupling between cortical gradient organization and neutral-face representation in children</h3>
+      <p>Poster, Society for Neuroscience, Washington, DC</p></li>
+    <li><h3>Cortical gradient organization as a neural architecture for neutral-face representation in children</h3>
+      <p>Poster, Korean Society for Brain and Neural Sciences, Daejeon</p></li>
+    <li><h3>Neutral faces, negative reads: Limbic–cortical integration shapes efficiency in children</h3>
+      <p>Poster, Korean Society for Cognitive &amp; Biological Psychology, Seoul</p></li>
+  </ul></div>
+
+  <div class="year"><div class="y">2025</div><ul class="talks">
+    <li><h3>Neutral faces, negative reads: Limbic–cortical integration shapes efficiency in children</h3>
+      <p>Poster, Korean Society for Human Brain Mapping, Seoul · <span class="award">Award of Excellence</span></p></li>
+    <li><h3>Network and gene shape emotional distress to social exclusion</h3>
+      <p>Talk, Sunbelt Conference of the International Network for Social Network Analysis, Paris</p></li>
+    <li><h3>From genes to brain: OXTR and social networks shaping neural responses through emotional processing in social exclusion</h3>
+      <p>Talk, National Sociology Graduate Student Conference, Seoul · <span class="award">Award of Excellence</span></p></li>
+  </ul></div>
+
+  <div class="year"><div class="y">2024</div><ul class="talks">
+    <li><h3>Is more always better? The role of social network size and closeness in adolescent mental health</h3>
+      <p>Talk, Korean Sociological Association, Pohang</p></li>
+    <li><h3>Association of brain structure and making new friends in the first year of high school: Evidence from a girls’ high school in South Korea</h3>
+      <p>Talk, National Sociology Graduate Student Conference, Seoul</p></li>
+  </ul></div>
+
+  <div class="year"><div class="y">2023</div><ul class="talks">
+    <li><h3>Mother–father–child (triad): Gender differences in adolescent social network size</h3>
+      <p>Talk, Korean Sociological Association, Seoul</p></li>
+    <li><h3>Mother–father–child (triad): Gender differences in adolescent social network size</h3>
+      <p>Talk, Korean Association for Survey Research, Seoul · <span class="award">Award of Excellence</span></p></li>
+  </ul></div>
+</section>
+
+<section id="honors">
+  <h2>Awards &amp; scholarships</h2>
+  <div class="row"><div class="date">2026</div><div>
+    <h3>Merit Thesis Award</h3>
+    <p>Yonsei University Graduate School, master’s thesis</p></div></div>
+  <div class="row"><div class="date">2025</div><div>
+    <h3>Award of Excellence, poster</h3>
+    <p>Korean Society for Human Brain Mapping, Autumn Conference</p></div></div>
+  <div class="row"><div class="date">2025</div><div>
+    <h3>Award of Excellence</h3>
+    <p>24th National Sociology Graduate Student Conference</p></div></div>
+  <div class="row"><div class="date">2023</div><div>
+    <h3>Award of Excellence</h3>
+    <p>Korean Association for Survey Research, Autumn Conference</p></div></div>
+  <p class="group-title">Scholarships</p>
+  <div class="row"><div class="date">2026 – now</div><div>
+    <h3>National Scholarship</h3>
+    <p>KAIST Graduate School</p></div></div>
+  <div class="row"><div class="date">2024 – 2025</div><div>
+    <h3>Brain Korea 21 FOUR Scholarship</h3>
+    <p>National Research Foundation of Korea, Dept. of Sociology, Yonsei University</p></div></div>
+  <div class="row"><div class="date">2023 – 2025</div><div>
+    <h3>Integrated Undergraduate–Graduate Program Scholarship</h3>
+    <p>Yonsei University Graduate School</p></div></div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="row"><div class="date">2026 – 2028</div><div>
+    <h3>M.S. in Bio and Brain Engineering, KAIST</h3>
+    <p>Expected Feb 2028 · Advisor: Yong Jeong</p></div></div>
+  <div class="row"><div class="date">2023 – 2025</div><div>
+    <h3>M.A. in Sociology, Yonsei University</h3>
+    <p>Integrated undergraduate–graduate program · Advisor: Yoosik Youm</p>
+    <p>Thesis: “Higher out-degree centrality amplifies social pain in OXTR G-allele carriers: A study of social exclusion combining fMRI and socio-centric network data”</p></div></div>
+  <div class="row"><div class="date">2020 – 2023</div><div>
+    <h3>B.A. in Sociology, Yonsei University</h3>
+    <p>Completed the teacher certification program</p></div></div>
+</section>
+
+<section id="experience">
+  <h2>Research experience</h2>
+  <div class="row"><div class="date">2026.03 – now</div><div>
+    <h3>Graduate Researcher</h3>
+    <p>Cognitive Neuroscience &amp; NeuroImaging Lab, KAIST, Daejeon</p></div></div>
+  <div class="row"><div class="date">2026.03 – now</div><div>
+    <h3>Student Researcher</h3>
+    <p>Brain Development Imaging Lab, Korea Brain Research Institute, Daegu</p>
+    <ul><li>Korean Older Adult Facial Expression Database (KOFED)</li><li>Facial Expression Recognition Task (FERT)</li></ul></div></div>
+  <div class="row"><div class="date">2025.10 – 2026.02</div><div>
+    <h3>Post-Master’s Researcher</h3>
+    <p>Brain Development Imaging Lab, Korea Brain Research Institute, Daegu</p>
+    <ul><li>Korean Older Adult Facial Expression Database (KOFED)</li><li>Development of MoodSpy, a digital social cognition tool</li></ul></div></div>
+  <div class="row"><div class="date">2023.07 – 2025.08</div><div>
+    <h3>Research Assistant</h3>
+    <p>Social Network &amp; Neuroscience Lab, Yonsei University, Seoul</p>
+    <ul><li>Korean Study of Adolescent Health (KSAH)</li><li>Korean Social Life, Health, and Aging Project (KSHAP)</li></ul></div></div>
+  <div class="row"><div class="date">2024.06 – 2024.08</div><div>
+    <h3>Summer Intern</h3>
+    <p>NORC at the University of Chicago, Chicago</p>
+    <ul><li>National Social Life, Health, and Aging Project (NSHAP)</li></ul></div></div>
+  <div class="row"><div class="date">2023.09 – 2023.10</div><div>
+    <h3>Research Assistant</h3>
+    <p>Korean Women’s Development Institute, Seoul</p>
+    <ul><li>Statistical analysis and preparation of statistical tables</li></ul></div></div>
+  <div class="row"><div class="date">2021.05 – 2022.08</div><div>
+    <h3>Research Assistant</h3>
+    <p>Korean Urban Rural Elderly (KURE) project, Yonsei University, Seoul</p></div></div>
+</section>
+
+<section id="contact">
+  <h2>Get in touch about collaborations or data</h2>
+  <div class="contact">
+    <div>
+      <a class="contact-mail" href="mailto:yeonjinchoi@kaist.ac.kr"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>yeonjinchoi@kaist.ac.kr</a>
+      <p class="contact-alt">or <a href="mailto:yeonjinchoi0805@gmail.com">yeonjinchoi0805@gmail.com</a></p>
+    </div>
+    <div class="qr">
+      <div class="qr-box loading"><canvas id="qr" width="240" height="240" aria-label="QR code linking to this page"></canvas></div>
+      <div class="qr-text">Scan to open this page<br><button type="button" class="copy" id="copy"><svg class="ico cp" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ico ok" aria-hidden="true"><use href="#i-check"/></svg><span>Copy link</span></button></div>
+    </div>
+  </div>
+</section>
+
+<footer><span>© 2026 Yeonjin Choi</span><span>Updated November 2026</span></footer>
 </main>
-<footer><div class="wrap"><span>© 2026 Yeonjin Choi · 최연진</span><span>Last updated 11 November 2026</span></div></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</div>
+
 <script>
-const url='https://yeonjinch0i.github.io/';
-if(typeof QRious!=='undefined')new QRious({element:document.getElementById('qr'),value:url,size:200,foreground:'#1b2130',background:'#fff'});
-document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(url);document.getElementById('copy').textContent='Copied!'}catch(e){prompt('Copy this link:',url)}});
-document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.menu').classList.remove('open')));
+(function(){
+  var url='https://yeonjinch0i.github.io/';
+
+  // portrait: keep the placeholder until the image has loaded, then fade in
+  var photo=document.querySelector('.photo'),img=photo.querySelector('img');
+  function shown(){photo.classList.add('loaded')}
+  if(img.complete&&img.naturalWidth)shown();else{img.addEventListener('load',shown);img.addEventListener('error',shown)}
+
+  // QR: placeholder until the library arrives; drop the block if it never does
+  var box=document.querySelector('.qr-box');
+  var s=document.createElement('script');
+  s.src='https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js';
+  s.onload=function(){new QRious({element:document.getElementById('qr'),value:url,size:240,foreground:'#14171c',background:'#ffffff'});box.classList.remove('loading')};
+  s.onerror=function(){box.remove()};
+  document.body.appendChild(s);
+
+  // copy link with visible confirmation
+  var btn=document.getElementById('copy'),label=btn.querySelector('span'),t;
+  btn.addEventListener('click',function(){
+    (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject())
+      .then(function(){btn.classList.add('done');label.textContent='Copied';clearTimeout(t);
+        t=setTimeout(function(){btn.classList.remove('done');label.textContent='Copy link'},1800)})
+      .catch(function(){window.prompt('Copy this link:',url)});
+  });
+
+  // highlight the section in view
+  var links={};document.querySelectorAll('.toc a').forEach(function(a){links[a.hash.slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;
+      for(var k in links)links[k].classList.toggle('on',k===e.target.id)})},{rootMargin:'-35% 0px -60% 0px'});
+    document.querySelectorAll('main section').forEach(function(sec){io.observe(sec)});
+  }
+})();
 </script>
 </body>
 </html>
