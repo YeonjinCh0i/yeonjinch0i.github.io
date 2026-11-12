@@ -54,12 +54,12 @@ a:hover{color:var(--accent);text-decoration-color:currentColor}
 
 /* ============ Layout ============ */
 .page{max-width:1140px;margin:0 auto;padding:0 var(--s6);
-  display:grid;grid-template-columns:272px minmax(0,1fr);gap:var(--s8)}
+  display:grid;grid-template-columns:300px minmax(0,1fr);gap:var(--s8)}
 
 /* ============ Sidebar ============ */
-.side{position:sticky;top:0;align-self:start;
-  padding:var(--s7) 0 var(--s5);display:flex;flex-direction:column;max-height:100vh;overflow-y:auto;scrollbar-width:none}
-.photo{width:176px;aspect-ratio:4/5;border-radius:var(--r-out);overflow:hidden;
+.side{padding:var(--s7) 0 var(--s5);display:flex;flex-direction:column}
+.side nav{position:sticky;top:var(--s6)}
+.photo{width:156px;aspect-ratio:4/5;border-radius:var(--r-out);overflow:hidden;
   background:var(--surface);margin:0 0 var(--s5)}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;display:block;
   opacity:0;transition:opacity .5s var(--ease)}
@@ -80,7 +80,7 @@ a:hover{color:var(--accent);text-decoration-color:currentColor}
 .cta:hover{color:var(--accent-ink);transform:translateY(-1px);box-shadow:0 6px 18px -8px var(--accent)}
 .cta:active{transform:translateY(0)}
 
-.toc{list-style:none;margin:0;padding:var(--s6) 0 0;font-size:var(--t-sm);line-height:1.9}
+.toc{list-style:none;margin:0;padding:var(--s5) 0 0;font-size:var(--t-sm);line-height:1.75}
 .toc a{text-decoration:none;color:var(--ink-3);display:block;padding-left:var(--s3);
   border-left:2px solid transparent;transition:color .15s var(--ease),border-color .2s var(--ease)}
 .toc a:hover{color:var(--ink)}
@@ -122,14 +122,14 @@ h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
 .pubs .authors{font-size:var(--t-sm);color:var(--ink-3);margin:2px 0 0}
 
 /* dated rows */
-.row{display:grid;grid-template-columns:136px minmax(0,1fr);gap:var(--s5);padding:0 0 var(--s5)}
+.row{display:grid;grid-template-columns:152px minmax(0,1fr);gap:var(--s5);padding:0 0 var(--s5)}
 .date{font-size:var(--t-sm);color:var(--ink-3);font-variant-numeric:tabular-nums lining-nums;padding-top:1px;white-space:nowrap}
 .row p{margin:2px 0 0;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
 .row ul{margin:var(--s2) 0 0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
 .row ul li::marker{color:var(--ink-3)}
 
 /* talks */
-.year{display:grid;grid-template-columns:136px minmax(0,1fr);gap:var(--s5);margin-bottom:var(--s6)}
+.year{display:grid;grid-template-columns:152px minmax(0,1fr);gap:var(--s5);margin-bottom:var(--s6)}
 .year .y{font-size:var(--t-sm);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;padding-top:1px}
 .talks{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
 .talks h3{font-weight:500}
@@ -161,10 +161,39 @@ h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
 footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid var(--line);
   font-size:var(--t-xs);color:var(--ink-3);display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:wrap}
 
+
+/* ============ Mobile top bar ============ */
+.topbar{display:none}
+@media (max-width:920px){
+  .topbar{display:block;position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);
+    -webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-in{display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 20px}
+  .topbar-name{font-weight:700;letter-spacing:-.02em;text-decoration:none;color:var(--ink)}
+  .menu-btn{width:44px;height:44px;margin-right:-10px;display:grid;place-items:center;background:none;border:0;
+    color:var(--ink);cursor:pointer;border-radius:10px}
+  .menu-btn:active{background:var(--surface)}
+  .bars{position:relative;width:20px;height:14px}
+  .bars i{position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:currentColor;
+    transition:transform .25s var(--ease),opacity .2s var(--ease),top .25s var(--ease)}
+  .bars i:nth-child(1){top:0}.bars i:nth-child(2){top:6px}.bars i:nth-child(3){top:12px}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(1){top:6px;transform:rotate(45deg)}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded="true"] .bars i:nth-child(3){top:6px;transform:rotate(-45deg)}
+  .m-menu{position:absolute;left:0;right:0;top:100%;margin:0;padding:0 20px;display:grid;grid-template-rows:0fr;
+    background:var(--bg);box-shadow:0 12px 24px -16px rgb(0 0 0 / .25);
+    transition:grid-template-rows .3s var(--ease),padding .3s var(--ease)}
+  .m-menu > div{overflow:hidden}
+  .topbar.open .m-menu{grid-template-rows:1fr;padding-bottom:var(--s3);border-bottom:1px solid var(--line)}
+  .m-menu a{display:block;padding:12px 0;font-size:var(--t-base);font-weight:500;color:var(--ink-2);
+    text-decoration:none;border-top:1px solid var(--line)}
+  .m-menu a:active,.m-menu a.on{color:var(--accent)}
+  section{scroll-margin-top:72px}
+}
+
 /* ============ Responsive ============ */
 @media (max-width:920px){
   .page{grid-template-columns:1fr;gap:0;padding:0 20px}
-  .side{position:static;max-height:none;overflow:visible;padding:var(--s7) 0 0}
+  .side{padding:var(--s7) 0 0}
   .head{display:flex;gap:var(--s5);align-items:flex-end}
   .photo{width:120px;margin:0;flex:none;border-radius:12px}
   .toc{display:none}
@@ -194,19 +223,37 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
 </svg>
 
+<header class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="topbar-name" href="#about">Yeonjin Choi</a>
+    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu"><span class="bars"><i></i><i></i><i></i></span></button>
+  </div>
+  <nav class="m-menu" id="m-menu" aria-label="Sections"><div>
+    <a href="#about">About</a>
+    <a href="#current">Current projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#presentations">Presentations</a>
+    <a href="#honors">Awards</a>
+    <a href="#scholarships">Scholarships</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Research experience</a>
+    <a href="#contact">Contact</a>
+  </div></nav>
+</header>
+
 <div class="page">
 
 <aside class="side">
   <div class="head">
-    <div class="photo"><img src="assets/portrait.png" alt="Yeonjin Choi" width="400" height="500" decoding="async"></div>
+    <div class="photo"><img src="assets/portrait.png" alt="Yeonjin Choi" width="840" height="1050" decoding="async"></div>
     <div>
       <h1 class="name">Yeonjin Choi</h1>
       <p class="name-kr" lang="ko">최연진</p>
     </div>
   </div>
   <ul class="positions">
-    <li><strong>KAIST</strong>M.S. student, Bio and Brain Engineering<br><a href="http://ibrain.kaist.ac.kr/" target="_blank" rel="noopener">Cognitive Neuroscience &amp; NeuroImaging Lab</a></li>
-    <li><strong>Korea Brain Research Institute</strong>Researcher<br><a href="https://minyoungjung.com/" target="_blank" rel="noopener">Brain Development Imaging Lab</a></li>
+    <li><strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>Master’s student, Department of Bio and Brain Engineering<br><a href="http://ibrain.kaist.ac.kr/" target="_blank" rel="noopener">Laboratory for Cognitive Neuroscience and NeuroImaging (CNI)</a></li>
+    <li><strong>Korea Brain Research Institute (KBRI)</strong>Researcher<br><a href="https://minyoungjung.com/" target="_blank" rel="noopener">Brain Development Imaging Lab (BDIL)</a></li>
   </ul>
   <a class="cta" href="mailto:yeonjinchoi@kaist.ac.kr"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>Email me</a>
   <nav aria-label="Sections">
@@ -215,7 +262,8 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
       <li><a href="#current">Current projects</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#presentations">Presentations</a></li>
-      <li><a href="#honors">Awards &amp; scholarships</a></li>
+      <li><a href="#honors">Awards</a></li>
+      <li><a href="#scholarships">Scholarships</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#experience">Research experience</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -226,27 +274,27 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 <main>
 
 <section id="about" style="padding-top:0">
-  <p class="lede">I study how social experience and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative disease.</p>
+  <p class="lede">I study how social experiences and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative diseases.</p>
   <div class="prose">
     <p>What first fascinated me about sociology was how our thoughts and behaviors are shaped not only by individual characteristics, but also by <strong>the relationships and environments around us</strong>. As I studied social networks, I became increasingly curious about how such relationships and experiences influence individuals. This led me to a broader question: <strong>why do people think and respond differently, even when they are in similar environments?</strong></p>
     <p>That curiosity prompted me to <strong>expand my research into neuroscience</strong>. While sociology taught me to understand people within their social contexts, neuroscience offered new ways to investigate the neural processes associated with these experiences and individual differences. I see the two fields not as separate paths, but as <strong>complementary perspectives</strong> that together offer a more complete understanding of human behavior.</p>
-    <p>Today, by <strong>combining large-scale neuroimaging cohort analyses with behavioral and fMRI experiments</strong>, I aim to connect different types of data and disciplinary perspectives to explore relationships that might be difficult to uncover through any single approach.</p>
+    <p>By <strong>combining large-scale neuroimaging cohort analyses with behavioral and fMRI experiments</strong>, I aim to connect different types of data and disciplinary perspectives to explore relationships that might be difficult to uncover through any single approach.</p>
   </div>
-  <p class="interests">Social neuroscience · Developmental neuroscience · Cognitive reserve · Brain aging and Alzheimer’s disease · Multimodal neuroimaging</p>
+  <p class="interests">Social Neuroscience · Developmental Neuroscience · Cognitive Reserve · Brain Aging &amp; Alzheimer’s · Multimodal Neuroimaging</p>
 </section>
 
 <section id="current">
   <h2>Current projects</h2>
   <div class="projects">
     <div class="project">
-      <h3>Social support, brain organization, and cognitive aging</h3>
-      <p class="org">KAIST, Cognitive Neuroscience &amp; NeuroImaging Lab</p>
-      <p>Analyzing <strong>ADNI, AABC, and KBASE</strong> cohorts with fMRI, DTI, and PET to study brain organization in aging and Alzheimer’s disease, cognitive reserve, and the possible role of social support.</p>
+      <h3>Brain aging, Alzheimer’s &amp; cognitive reserve</h3>
+      <p class="org">Laboratory for Cognitive Neuroscience and NeuroImaging (CNI), KAIST</p>
+      <p>Analyzing <strong>ADNI, AABC, and KBASE</strong> data with fMRI, DTI, and PET to study brain organization, cognitive aging, and the possible role of social support.</p>
     </div>
     <div class="project">
-      <h3>How children and older adults read emotional faces</h3>
-      <p class="org">Korea Brain Research Institute, Brain Development Imaging Lab</p>
-      <p>Running fMRI, survey, and behavioral studies with children and caregivers, and building the <strong>Korean Older Adult Facial Expression Database (KOFED)</strong> and the Facial Expression Recognition Task (FERT).</p>
+      <h3>Development, emotion &amp; data collection</h3>
+      <p class="org">Brain Development Imaging Lab (BDIL), KBRI</p>
+      <p>fMRI, surveys, and behavioral experiments with children and caregivers; <strong>Korean Older Adult Facial Expression Database (KOFED)</strong>; Facial Expression Recognition Task (FERT).</p>
     </div>
   </div>
 </section>
@@ -254,125 +302,135 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 <section id="publications">
   <h2>Publications</h2>
   <a class="feature" href="https://www.nature.com/articles/s41598-026-57755-0" target="_blank" rel="noopener">
-    <p class="venue">Scientific Reports, 2026</p>
+    <p class="venue">Scientific Reports · Published 07 July 2026</p>
     <h3>Development and validation of the Korean Child Emotional Face Database for research in developmental neuroscience</h3>
-    <p class="authors">Lee, S., Cheong, Y., Ro, J., <b>Choi, Y.</b>, &amp; Jung, M.</p>
-    <div class="links"><span class="read">Read article <svg class="ico" aria-hidden="true"><use href="#i-out"/></svg></span><span class="muted">doi:10.1038/s41598-026-57755-0</span></div>
+    <p class="authors">Lee, S., Cheong, Y., Ro, J., <b>Choi, Y.</b>, &amp; Jung, M. (2026).</p>
+    <div class="links"><span class="read">Read the article <svg class="ico" aria-hidden="true"><use href="#i-out"/></svg></span><span class="muted">DOI: 10.1038/s41598-026-57755-0</span></div>
   </a>
 
-  <p class="group-title">In preparation</p>
+  <p class="group-title">Manuscripts in preparation</p>
   <ol class="pubs">
     <li><h3>Cortical functional organization relates to children’s affective representations of neutral faces</h3>
       <p class="authors"><b>Choi, Y.</b>, Lee, S., Cheong, Y., Jeong, H., Ro, J., Lee, S., Han, J., Jeong, Y., &amp; Jung, M.</p></li>
-    <li><h3>More connected, more hurt—but only for some: Genotype–network interactions heighten sensitivity to social exclusion</h3>
+    <li><h3>More Connected, More Hurt — But Only for Some: Genotype–Network Interactions Heighten Sensitivity to Social Exclusion</h3>
       <p class="authors"><b>Choi, Y.</b>, Lee, S.-H., Kim, H., Chey, J., Parkinson, C., &amp; Youm, Y.</p></li>
   </ol>
 </section>
 
 <section id="presentations">
-  <h2>Presentations</h2>
+  <h2>Conference presentations</h2>
 
   <div class="year"><div class="y">2026</div><ul class="talks">
     <li><h3>Age-dependent coupling between cortical gradient organization and neutral-face representation in children</h3>
-      <p>Poster, Society for Neuroscience, Washington, DC</p></li>
+      <p>Society for Neuroscience (SfN) 2026 · Washington, DC, USA · Nov 2026 · International, Poster</p></li>
     <li><h3>Cortical gradient organization as a neural architecture for neutral-face representation in children</h3>
-      <p>Poster, Korean Society for Brain and Neural Sciences, Daejeon</p></li>
-    <li><h3>Neutral faces, negative reads: Limbic–cortical integration shapes efficiency in children</h3>
-      <p>Poster, Korean Society for Cognitive &amp; Biological Psychology, Seoul</p></li>
+      <p>Korean Society for Brain and Neural Sciences (KSBNS) 2026 · Daejeon, Korea · Sep 2026 · Poster</p></li>
+    <li><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3>
+      <p>Korean Society for Cognitive &amp; Biological Psychology 2026 Annual Conference · Seoul, Korea · Jan 2026 · Poster</p></li>
   </ul></div>
 
   <div class="year"><div class="y">2025</div><ul class="talks">
-    <li><h3>Neutral faces, negative reads: Limbic–cortical integration shapes efficiency in children</h3>
-      <p>Poster, Korean Society for Human Brain Mapping, Seoul · <span class="award">Award of Excellence</span></p></li>
-    <li><h3>Network and gene shape emotional distress to social exclusion</h3>
-      <p>Talk, Sunbelt Conference of the International Network for Social Network Analysis, Paris</p></li>
-    <li><h3>From genes to brain: OXTR and social networks shaping neural responses through emotional processing in social exclusion</h3>
-      <p>Talk, National Sociology Graduate Student Conference, Seoul · <span class="award">Award of Excellence</span></p></li>
+    <li><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3>
+      <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea · Nov 2025 · Poster · <span class="award">Award</span></p></li>
+    <li><h3>Network and Gene Shape Emotional Distress to Social Exclusion</h3>
+      <p>2025 Sunbelt — International Network for Social Network Analysis Conference · Paris, France · Jun 2025 · International, Oral</p></li>
+    <li><h3>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</h3>
+      <p>24th National Sociology Graduate Student Conference · Seoul, Korea · Feb 2025 · Oral · <span class="award">Award</span></p></li>
   </ul></div>
 
   <div class="year"><div class="y">2024</div><ul class="talks">
-    <li><h3>Is more always better? The role of social network size and closeness in adolescent mental health</h3>
-      <p>Talk, Korean Sociological Association, Pohang</p></li>
-    <li><h3>Association of brain structure and making new friends in the first year of high school: Evidence from a girls’ high school in South Korea</h3>
-      <p>Talk, National Sociology Graduate Student Conference, Seoul</p></li>
+    <li><h3>Is More Always Better? The Role of Social Network Size and Closeness in Adolescent Mental Health</h3>
+      <p>Korean Sociological Association 2024 Summer Conference · Pohang, Korea · Jun 2024 · Oral</p></li>
+    <li><h3>Association of Brain Structure and Making New Friends in the First Year of High School: Evidence from a Girls’ High School in South Korea</h3>
+      <p>23rd National Sociology Graduate Student Conference · Seoul, Korea · Feb 2024 · Oral</p></li>
   </ul></div>
 
   <div class="year"><div class="y">2023</div><ul class="talks">
-    <li><h3>Mother–father–child (triad): Gender differences in adolescent social network size</h3>
-      <p>Talk, Korean Sociological Association, Seoul</p></li>
-    <li><h3>Mother–father–child (triad): Gender differences in adolescent social network size</h3>
-      <p>Talk, Korean Association for Survey Research, Seoul · <span class="award">Award of Excellence</span></p></li>
+    <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
+      <p>Korean Sociological Association 2023 Winter Conference · Seoul, Korea · Dec 2023 · Oral</p></li>
+    <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
+      <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea · Dec 2023 · Oral · <span class="award">Award</span></p></li>
   </ul></div>
 </section>
 
 <section id="honors">
-  <h2>Awards &amp; scholarships</h2>
-  <div class="row"><div class="date">2026</div><div>
+  <h2>Awards</h2>
+  <div class="row"><div class="date">Aug 2026</div><div>
     <h3>Merit Thesis Award</h3>
-    <p>Yonsei University Graduate School, master’s thesis</p></div></div>
-  <div class="row"><div class="date">2025</div><div>
-    <h3>Award of Excellence, poster</h3>
-    <p>Korean Society for Human Brain Mapping, Autumn Conference</p></div></div>
-  <div class="row"><div class="date">2025</div><div>
+    <p>Yonsei University Graduate School — Master’s thesis · Seoul, Korea</p>
+    <p>“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
+  <div class="row"><div class="date">Nov 2025</div><div>
+    <h3>Award of Excellence (Poster)</h3>
+    <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea</p>
+    <p>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p></div></div>
+  <div class="row"><div class="date">Feb 2025</div><div>
     <h3>Award of Excellence</h3>
-    <p>24th National Sociology Graduate Student Conference</p></div></div>
-  <div class="row"><div class="date">2023</div><div>
+    <p>24th National Sociology Graduate Student Conference · Seoul, Korea</p>
+    <p>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p></div></div>
+  <div class="row"><div class="date">Dec 2023</div><div>
     <h3>Award of Excellence</h3>
-    <p>Korean Association for Survey Research, Autumn Conference</p></div></div>
-  <p class="group-title">Scholarships</p>
-  <div class="row"><div class="date">2026 – now</div><div>
-    <h3>National Scholarship</h3>
-    <p>KAIST Graduate School</p></div></div>
-  <div class="row"><div class="date">2024 – 2025</div><div>
+    <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea</p>
+    <p>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p></div></div>
+</section>
+
+<section id="scholarships">
+  <h2>Scholarships</h2>
+  <div class="row"><div class="date">Mar 2026 – Present</div><div>
+    <h3>National Scholarship Student of KAIST</h3>
+    <p>KAIST Graduate School, Daejeon</p></div></div>
+  <div class="row"><div class="date">Mar 2024 – Aug 2025</div><div>
     <h3>Brain Korea 21 FOUR Scholarship</h3>
-    <p>National Research Foundation of Korea, Dept. of Sociology, Yonsei University</p></div></div>
-  <div class="row"><div class="date">2023 – 2025</div><div>
-    <h3>Integrated Undergraduate–Graduate Program Scholarship</h3>
-    <p>Yonsei University Graduate School</p></div></div>
+    <p>National Research Foundation of Korea — BK21 FOUR Program, Dept. of Sociology, Yonsei University</p></div></div>
+  <div class="row"><div class="date">Aug 2023 – Aug 2025</div><div>
+    <h3>Integrated Undergraduate-and-Graduate Program</h3>
+    <p>Yonsei University Graduate School, Seoul</p></div></div>
 </section>
 
 <section id="education">
   <h2>Education</h2>
-  <div class="row"><div class="date">2026 – 2028</div><div>
-    <h3>M.S. in Bio and Brain Engineering, KAIST</h3>
-    <p>Expected Feb 2028 · Advisor: Yong Jeong</p></div></div>
-  <div class="row"><div class="date">2023 – 2025</div><div>
-    <h3>M.A. in Sociology, Yonsei University</h3>
-    <p>Integrated undergraduate–graduate program · Advisor: Yoosik Youm</p>
-    <p>Thesis: “Higher out-degree centrality amplifies social pain in OXTR G-allele carriers: A study of social exclusion combining fMRI and socio-centric network data”</p></div></div>
-  <div class="row"><div class="date">2020 – 2023</div><div>
-    <h3>B.A. in Sociology, Yonsei University</h3>
-    <p>Completed the teacher certification program</p></div></div>
+  <div class="row"><div class="date">Mar 2026 – Present</div><div>
+    <h3>Korea Advanced Institute of Science and Technology (KAIST)</h3>
+    <p>Department of Bio and Brain Engineering — Master’s student (Expected Feb 2028)</p>
+    <p>Advisor: Yong Jeong · Daejeon, Korea</p></div></div>
+  <div class="row"><div class="date">Aug 2023 – Aug 2025</div><div>
+    <h3>Yonsei University</h3>
+    <p>Department of Sociology — M.A. in Sociology (Integrated Undergraduate &amp; Graduate Program)</p>
+    <p>Advisor: Yoosik Youm · Seoul, Korea</p>
+    <p>Thesis: “Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
+  <div class="row"><div class="date">Mar 2020 – Aug 2023</div><div>
+    <h3>Yonsei University</h3>
+    <p>Department of Sociology — B.A. in Sociology</p>
+    <p>Completed Curriculum for Teaching Profession · Seoul, Korea</p></div></div>
 </section>
 
 <section id="experience">
   <h2>Research experience</h2>
-  <div class="row"><div class="date">2026.03 – now</div><div>
+  <div class="row"><div class="date">Mar 2026 – Present</div><div>
     <h3>Graduate Researcher</h3>
-    <p>Cognitive Neuroscience &amp; NeuroImaging Lab, KAIST, Daejeon</p></div></div>
-  <div class="row"><div class="date">2026.03 – now</div><div>
+    <p>Laboratory for Cognitive Neuroscience and NeuroImaging (CNI), KAIST · Daejeon, Korea</p></div></div>
+  <div class="row"><div class="date">Mar 2026 – Present</div><div>
     <h3>Student Researcher</h3>
-    <p>Brain Development Imaging Lab, Korea Brain Research Institute, Daegu</p>
-    <ul><li>Korean Older Adult Facial Expression Database (KOFED)</li><li>Facial Expression Recognition Task (FERT)</li></ul></div></div>
-  <div class="row"><div class="date">2025.10 – 2026.02</div><div>
-    <h3>Post-Master’s Researcher</h3>
-    <p>Brain Development Imaging Lab, Korea Brain Research Institute, Daegu</p>
-    <ul><li>Korean Older Adult Facial Expression Database (KOFED)</li><li>Development of MoodSpy, a digital social cognition tool</li></ul></div></div>
-  <div class="row"><div class="date">2023.07 – 2025.08</div><div>
+    <p>Brain Development Imaging Lab (BDIL), KBRI · Daegu, Korea</p>
+    <ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Facial Expression Recognition Task (FERT)</li></ul></div></div>
+  <div class="row"><div class="date">Oct 2025 – Feb 2026</div><div>
+    <h3>Post-Master Researcher</h3>
+    <p>Brain Development Imaging Lab (BDIL), KBRI · Daegu, Korea</p>
+    <ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Development of MoodSpy, a digital social cognition tool</li></ul></div></div>
+  <div class="row"><div class="date">Jul 2023 – Aug 2025</div><div>
     <h3>Research Assistant</h3>
-    <p>Social Network &amp; Neuroscience Lab, Yonsei University, Seoul</p>
-    <ul><li>Korean Study of Adolescent Health (KSAH)</li><li>Korean Social Life, Health, and Aging Project (KSHAP)</li></ul></div></div>
-  <div class="row"><div class="date">2024.06 – 2024.08</div><div>
-    <h3>Summer Intern</h3>
-    <p>NORC at the University of Chicago, Chicago</p>
+    <p>Social Network &amp; Neuroscience (SNN) Lab, Yonsei University · Seoul, Korea</p>
+    <ul><li>Korean Study of Adolescent Health (KSAH) project</li><li>Korean Social Life, Health, and Aging Project (KSHAP)</li></ul></div></div>
+  <div class="row"><div class="date">Jun 2024 – Aug 2024</div><div>
+    <h3>Summer Internship Program</h3>
+    <p>NORC at the University of Chicago · Chicago, USA</p>
     <ul><li>National Social Life, Health, and Aging Project (NSHAP)</li></ul></div></div>
-  <div class="row"><div class="date">2023.09 – 2023.10</div><div>
+  <div class="row"><div class="date">Sep 2023 – Oct 2023</div><div>
     <h3>Research Assistant</h3>
-    <p>Korean Women’s Development Institute, Seoul</p>
+    <p>Korean Women’s Development Institute · Seoul, Korea</p>
     <ul><li>Statistical analysis and preparation of statistical tables</li></ul></div></div>
-  <div class="row"><div class="date">2021.05 – 2022.08</div><div>
+  <div class="row"><div class="date">May 2021 – Aug 2022</div><div>
     <h3>Research Assistant</h3>
-    <p>Korean Urban Rural Elderly (KURE) project, Yonsei University, Seoul</p></div></div>
+    <p>Korean Urban Rural Elderly (KURE) project, Yonsei University · Seoul, Korea</p></div></div>
 </section>
 
 <section id="contact">
@@ -389,7 +447,7 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   </div>
 </section>
 
-<footer><span>© 2026 Yeonjin Choi</span><span>Updated November 2026</span></footer>
+<footer><span>© 2026 Yeonjin Choi · 최연진</span><span>Last updated 12 November 2026</span></footer>
 </main>
 </div>
 
@@ -419,12 +477,22 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
       .catch(function(){window.prompt('Copy this link:',url)});
   });
 
+
+  // mobile menu: toggle, close on pick / outside tap / Escape
+  var bar=document.getElementById('topbar'),mbtn=bar.querySelector('.menu-btn');
+  function setMenu(open){bar.classList.toggle('open',open);mbtn.setAttribute('aria-expanded',open);
+    mbtn.setAttribute('aria-label',open?'Close menu':'Open menu')}
+  mbtn.addEventListener('click',function(){setMenu(!bar.classList.contains('open'))});
+  bar.querySelectorAll('.m-menu a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  document.addEventListener('click',function(e){if(!bar.contains(e.target))setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
   // highlight the section in view
-  var links={};document.querySelectorAll('.toc a').forEach(function(a){links[a.hash.slice(1)]=a});
+  var links={},mlinks={};document.querySelectorAll('.toc a').forEach(function(a){links[a.hash.slice(1)]=a});document.querySelectorAll('.m-menu a').forEach(function(a){mlinks[a.hash.slice(1)]=a});
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;
-      for(var k in links)links[k].classList.toggle('on',k===e.target.id)})},{rootMargin:'-35% 0px -60% 0px'});
+      for(var k in links)links[k].classList.toggle('on',k===e.target.id);for(var m in mlinks)mlinks[m].classList.toggle('on',m===e.target.id)})},{rootMargin:'-35% 0px -60% 0px'});
     document.querySelectorAll('main section').forEach(function(sec){io.observe(sec)});
   }
 })();
