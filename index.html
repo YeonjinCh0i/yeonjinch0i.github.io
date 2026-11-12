@@ -133,7 +133,14 @@ h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
 .row ul{margin:var(--s2) 0 0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
 .row ul li::marker{color:var(--ink-3)}
 
+/* awards */
+.row .award-venue{color:var(--ink);font-weight:600}
+.row .award-title{color:var(--ink-3)}
 /* talks */
+.year-head{display:flex;align-items:center;gap:var(--s3);margin:var(--s2) 0 var(--s5);
+  font-size:var(--t-sm);font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums lining-nums}
+.year-head::after{content:"";flex:1;height:1px;background:var(--line)}
+.year-head:not(:first-of-type){margin-top:var(--s5)}
 .talk{display:grid;grid-template-columns:var(--date-col) minmax(0,1fr) auto;gap:var(--s5);padding:0 0 var(--s5)}
 .talk-venue{margin:0 0 2px;font-size:var(--t-sm);font-weight:600;color:var(--ink)}
 .talk h3{font-weight:500}
@@ -332,6 +339,7 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 
 <section id="presentations">
   <h2>Conference presentations</h2>
+  <div class="year-head">2026</div>
   <div class="talk"><div class="date">Nov 2026</div><div class="talk-body">
     <p class="talk-venue">Society for Neuroscience (SfN) 2026</p><h3>Age-dependent coupling between cortical gradient organization and neutral-face representation in children</h3><p class="talk-loc">Washington, DC, USA</p></div>
     <div class="tags"><span class="tag">International</span><span class="tag">Poster</span></div></div>
@@ -341,6 +349,7 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   <div class="talk"><div class="date">Jan 2026</div><div class="talk-body">
     <p class="talk-venue">Korean Society for Cognitive &amp; Biological Psychology 2026 Annual Conference</p><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3><p class="talk-loc">Seoul, Korea</p></div>
     <div class="tags"><span class="tag">Poster</span></div></div>
+  <div class="year-head">2025</div>
   <div class="talk"><div class="date">Nov 2025</div><div class="talk-body">
     <p class="talk-venue">Korean Society for Human Brain Mapping 2025 Autumn Conference</p><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3><p class="talk-loc">Seoul, Korea</p></div>
     <div class="tags"><span class="tag">Poster</span><span class="tag tag-award">Award</span></div></div>
@@ -350,12 +359,14 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   <div class="talk"><div class="date">Feb 2025</div><div class="talk-body">
     <p class="talk-venue">24th National Sociology Graduate Student Conference</p><h3>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</h3><p class="talk-loc">Seoul, Korea</p></div>
     <div class="tags"><span class="tag">Oral</span><span class="tag tag-award">Award</span></div></div>
+  <div class="year-head">2024</div>
   <div class="talk"><div class="date">Jun 2024</div><div class="talk-body">
     <p class="talk-venue">Korean Sociological Association 2024 Summer Conference</p><h3>Is More Always Better? The Role of Social Network Size and Closeness in Adolescent Mental Health</h3><p class="talk-loc">Pohang, Korea</p></div>
     <div class="tags"><span class="tag">Oral</span></div></div>
   <div class="talk"><div class="date">Feb 2024</div><div class="talk-body">
     <p class="talk-venue">23rd National Sociology Graduate Student Conference</p><h3>Association of Brain Structure and Making New Friends in the First Year of High School: Evidence from a Girls’ High School in South Korea</h3><p class="talk-loc">Seoul, Korea</p></div>
     <div class="tags"><span class="tag">Oral</span></div></div>
+  <div class="year-head">2023</div>
   <div class="talk"><div class="date">Dec 2023</div><div class="talk-body">
     <p class="talk-venue">Korean Sociological Association 2023 Winter Conference</p><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3><p class="talk-loc">Seoul, Korea</p></div>
     <div class="tags"><span class="tag">Oral</span></div></div>
@@ -368,20 +379,20 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   <h2>Awards</h2>
   <div class="row"><div class="date">Aug 2026</div><div>
     <h3>Merit Thesis Award</h3>
-    <p>Yonsei University Graduate School — Master’s thesis</p>
-    <p>“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
+    <p class="award-venue">Yonsei University Graduate School — Master’s thesis</p>
+    <p class="award-title">“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
   <div class="row"><div class="date">Nov 2025</div><div>
     <h3>Award of Excellence (Poster)</h3>
-    <p>Korean Society for Human Brain Mapping 2025 Autumn Conference</p>
-    <p>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p></div></div>
+    <p class="award-venue">Korean Society for Human Brain Mapping 2025 Autumn Conference</p>
+    <p class="award-title">Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p></div></div>
   <div class="row"><div class="date">Feb 2025</div><div>
     <h3>Award of Excellence</h3>
-    <p>24th National Sociology Graduate Student Conference</p>
-    <p>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p></div></div>
+    <p class="award-venue">24th National Sociology Graduate Student Conference</p>
+    <p class="award-title">From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p></div></div>
   <div class="row"><div class="date">Dec 2023</div><div>
     <h3>Award of Excellence</h3>
-    <p>The Korean Association for Survey Research 2023 Autumn Conference</p>
-    <p>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p></div></div>
+    <p class="award-venue">The Korean Association for Survey Research 2023 Autumn Conference</p>
+    <p class="award-title">Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p></div></div>
 </section>
 
 <section id="scholarships">
