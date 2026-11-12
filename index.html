@@ -18,6 +18,7 @@
 <style>
 /* ============ Design tokens ============ */
 :root{
+  --date-col:152px;
   /* colour */
   --bg:#ffffff; --surface:#f5f6f8; --ink:#14171c; --ink-2:#3d434d; --ink-3:#5c6370;
   --line:#e4e6ea; --accent:#2350c8; --accent-ink:#ffffff; --accent-soft:#edf1fd;
@@ -88,10 +89,10 @@ a:hover{color:var(--accent);text-decoration-color:currentColor}
 
 /* ============ Main ============ */
 main{padding:var(--s7) 0 0;max-width:700px;min-width:0}
-.lede{font-size:var(--t-lg);line-height:1.45;font-weight:500;letter-spacing:-.02em;margin:0 0 var(--s5)}
+.lede{font-size:var(--t-lg);line-height:1.45;font-weight:500;letter-spacing:-.02em;margin:0 0 var(--s6)}
 .prose p{margin:0 0 var(--s4);color:var(--ink-2)}
 .prose strong,.project strong{color:var(--ink);font-weight:600}
-.interests{margin:0 0 var(--s6);padding:var(--s4) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.interests{margin:0 0 var(--s5);padding:0 0 var(--s4);border-bottom:1px solid var(--line)}
 .interests-label{margin:0 0 var(--s2);font-size:var(--t-xs);font-weight:600;color:var(--accent)}
 .interests ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--s1) 0;
   font-size:var(--t-base);font-weight:600;color:var(--ink);line-height:1.5}
@@ -126,19 +127,21 @@ h3{font-size:var(--t-base);font-weight:600;line-height:1.45;margin:0}
 .pubs .authors{font-size:var(--t-sm);color:var(--ink-3);margin:2px 0 0}
 
 /* dated rows */
-.row{display:grid;grid-template-columns:152px minmax(0,1fr);gap:var(--s5);padding:0 0 var(--s5)}
+.row{display:grid;grid-template-columns:var(--date-col) minmax(0,1fr);gap:var(--s5);padding:0 0 var(--s5)}
 .date{font-size:var(--t-sm);color:var(--ink-3);font-variant-numeric:tabular-nums lining-nums;padding-top:1px;white-space:nowrap}
 .row p{margin:2px 0 0;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
 .row ul{margin:var(--s2) 0 0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-sm);line-height:1.55}
 .row ul li::marker{color:var(--ink-3)}
 
 /* talks */
-.year{display:grid;grid-template-columns:152px minmax(0,1fr);gap:var(--s5);margin-bottom:var(--s6)}
-.year .y{font-size:var(--t-sm);font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums lining-nums;padding-top:1px}
-.talks{list-style:none;margin:0;padding:0;display:grid;gap:var(--s4)}
-.talks h3{font-weight:500}
-.talks p{margin:2px 0 0;font-size:var(--t-sm);color:var(--ink-3)}
-.award{color:var(--accent);font-weight:600}
+.talk{display:grid;grid-template-columns:var(--date-col) minmax(0,1fr) auto;gap:var(--s5);padding:0 0 var(--s5)}
+.talk-venue{margin:0 0 2px;font-size:var(--t-sm);font-weight:600;color:var(--ink)}
+.talk h3{font-weight:500}
+.talk-loc{margin:2px 0 0;font-size:var(--t-xs);color:var(--ink-3)}
+.tags{display:flex;flex-direction:column;gap:6px;align-items:stretch;padding-top:2px;width:96px}
+.tag{font-size:12px;font-weight:600;line-height:1;padding:5px 8px;border:1px solid var(--line);border-radius:6px;
+  color:var(--ink-2);text-align:center;white-space:nowrap}
+.tag-award{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft)}
 
 /* contact */
 .contact-lead{margin:-12px 0 var(--s5);color:var(--ink-2)}
@@ -208,8 +211,13 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 @media (max-width:560px){
   :root{--t-base:16px;--t-lg:21px;--t-xl:28px}
   .photo{width:104px}
-  .row,.year{grid-template-columns:1fr;gap:var(--s1)}
-  .year .y{margin-bottom:var(--s2)}
+  :root{--date-col:76px}
+  .row,.talk{gap:var(--s3)}
+  .date{white-space:normal;font-size:var(--t-xs);line-height:1.45;padding-top:3px}
+  .talk{grid-template-columns:var(--date-col) minmax(0,1fr)}
+  .tags{grid-column:2;flex-direction:row;flex-wrap:wrap;padding-top:0;margin-top:-4px;width:auto}
+  .interests ul{font-size:var(--t-sm)}
+  .interests li:not(:last-child)::after{margin:0 var(--s2)}
   .contact{grid-template-columns:1fr;gap:var(--s6)}
   .contact-mail{font-size:var(--t-md)}
 }
@@ -279,8 +287,8 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 <main>
 
 <section id="about" style="padding-top:0">
-  <p class="lede">I study how social experiences and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative diseases.</p>
   <div class="interests"><p class="interests-label">Research interests</p><ul><li>Social Neuroscience</li><li>Developmental Neuroscience</li><li>Cognitive Reserve</li><li>Brain Aging &amp; Alzheimer’s</li><li>Multimodal Neuroimaging</li></ul></div>
+  <p class="lede">I study how social experiences and the brain’s functional organization relate to cognition across the lifespan, from childhood development to aging and neurodegenerative diseases.</p>
   <div class="prose">
     <p>What first fascinated me about sociology was how our thoughts and behaviors are shaped not only by individual characteristics, but also by <strong>the relationships and environments around us</strong>. As I studied social networks, I became increasingly curious about how such relationships and experiences influence individuals. This led me to a broader question: <strong>why do people think and respond differently, even when they are in similar environments?</strong></p>
     <p>That curiosity prompted me to <strong>expand my research into neuroscience</strong>. While sociology taught me to understand people within their social contexts, neuroscience offered new ways to investigate the neural processes associated with these experiences and individual differences. I see the two fields not as separate paths, but as <strong>complementary perspectives</strong> that together offer a more complete understanding of human behavior.</p>
@@ -324,57 +332,55 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
 
 <section id="presentations">
   <h2>Conference presentations</h2>
-
-  <div class="year"><div class="y">2026</div><ul class="talks">
-    <li><h3>Age-dependent coupling between cortical gradient organization and neutral-face representation in children</h3>
-      <p>Society for Neuroscience (SfN) 2026 · Washington, DC, USA · Nov 2026 · International, Poster</p></li>
-    <li><h3>Cortical gradient organization as a neural architecture for neutral-face representation in children</h3>
-      <p>Korean Society for Brain and Neural Sciences (KSBNS) 2026 · Daejeon, Korea · Sep 2026 · Poster</p></li>
-    <li><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3>
-      <p>Korean Society for Cognitive &amp; Biological Psychology 2026 Annual Conference · Seoul, Korea · Jan 2026 · Poster</p></li>
-  </ul></div>
-
-  <div class="year"><div class="y">2025</div><ul class="talks">
-    <li><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3>
-      <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea · Nov 2025 · Poster · <span class="award">Award of Excellence (Poster)</span></p></li>
-    <li><h3>Network and Gene Shape Emotional Distress to Social Exclusion</h3>
-      <p>2025 Sunbelt — International Network for Social Network Analysis Conference · Paris, France · Jun 2025 · International, Oral</p></li>
-    <li><h3>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</h3>
-      <p>24th National Sociology Graduate Student Conference · Seoul, Korea · Feb 2025 · Oral · <span class="award">Award of Excellence</span></p></li>
-  </ul></div>
-
-  <div class="year"><div class="y">2024</div><ul class="talks">
-    <li><h3>Is More Always Better? The Role of Social Network Size and Closeness in Adolescent Mental Health</h3>
-      <p>Korean Sociological Association 2024 Summer Conference · Pohang, Korea · Jun 2024 · Oral</p></li>
-    <li><h3>Association of Brain Structure and Making New Friends in the First Year of High School: Evidence from a Girls’ High School in South Korea</h3>
-      <p>23rd National Sociology Graduate Student Conference · Seoul, Korea · Feb 2024 · Oral</p></li>
-  </ul></div>
-
-  <div class="year"><div class="y">2023</div><ul class="talks">
-    <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
-      <p>Korean Sociological Association 2023 Winter Conference · Seoul, Korea · Dec 2023 · Oral</p></li>
-    <li><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3>
-      <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea · Dec 2023 · Oral · <span class="award">Award of Excellence</span></p></li>
-  </ul></div>
+  <div class="talk"><div class="date">Nov 2026</div><div class="talk-body">
+    <p class="talk-venue">Society for Neuroscience (SfN) 2026</p><h3>Age-dependent coupling between cortical gradient organization and neutral-face representation in children</h3><p class="talk-loc">Washington, DC, USA</p></div>
+    <div class="tags"><span class="tag">International</span><span class="tag">Poster</span></div></div>
+  <div class="talk"><div class="date">Sep 2026</div><div class="talk-body">
+    <p class="talk-venue">Korean Society for Brain and Neural Sciences (KSBNS) 2026</p><h3>Cortical gradient organization as a neural architecture for neutral-face representation in children</h3><p class="talk-loc">Daejeon, Korea</p></div>
+    <div class="tags"><span class="tag">Poster</span></div></div>
+  <div class="talk"><div class="date">Jan 2026</div><div class="talk-body">
+    <p class="talk-venue">Korean Society for Cognitive &amp; Biological Psychology 2026 Annual Conference</p><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Poster</span></div></div>
+  <div class="talk"><div class="date">Nov 2025</div><div class="talk-body">
+    <p class="talk-venue">Korean Society for Human Brain Mapping 2025 Autumn Conference</p><h3>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Poster</span><span class="tag tag-award">Award</span></div></div>
+  <div class="talk"><div class="date">Jun 2025</div><div class="talk-body">
+    <p class="talk-venue">2025 Sunbelt — International Network for Social Network Analysis Conference</p><h3>Network and Gene Shape Emotional Distress to Social Exclusion</h3><p class="talk-loc">Paris, France</p></div>
+    <div class="tags"><span class="tag">International</span><span class="tag">Oral</span></div></div>
+  <div class="talk"><div class="date">Feb 2025</div><div class="talk-body">
+    <p class="talk-venue">24th National Sociology Graduate Student Conference</p><h3>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Oral</span><span class="tag tag-award">Award</span></div></div>
+  <div class="talk"><div class="date">Jun 2024</div><div class="talk-body">
+    <p class="talk-venue">Korean Sociological Association 2024 Summer Conference</p><h3>Is More Always Better? The Role of Social Network Size and Closeness in Adolescent Mental Health</h3><p class="talk-loc">Pohang, Korea</p></div>
+    <div class="tags"><span class="tag">Oral</span></div></div>
+  <div class="talk"><div class="date">Feb 2024</div><div class="talk-body">
+    <p class="talk-venue">23rd National Sociology Graduate Student Conference</p><h3>Association of Brain Structure and Making New Friends in the First Year of High School: Evidence from a Girls’ High School in South Korea</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Oral</span></div></div>
+  <div class="talk"><div class="date">Dec 2023</div><div class="talk-body">
+    <p class="talk-venue">Korean Sociological Association 2023 Winter Conference</p><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Oral</span></div></div>
+  <div class="talk"><div class="date">Dec 2023</div><div class="talk-body">
+    <p class="talk-venue">The Korean Association for Survey Research 2023 Autumn Conference</p><h3>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</h3><p class="talk-loc">Seoul, Korea</p></div>
+    <div class="tags"><span class="tag">Oral</span><span class="tag tag-award">Award</span></div></div>
 </section>
 
 <section id="honors">
   <h2>Awards</h2>
   <div class="row"><div class="date">Aug 2026</div><div>
     <h3>Merit Thesis Award</h3>
-    <p>Yonsei University Graduate School — Master’s thesis · Seoul, Korea</p>
+    <p>Yonsei University Graduate School — Master’s thesis</p>
     <p>“Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
   <div class="row"><div class="date">Nov 2025</div><div>
     <h3>Award of Excellence (Poster)</h3>
-    <p>Korean Society for Human Brain Mapping 2025 Autumn Conference · Seoul, Korea</p>
+    <p>Korean Society for Human Brain Mapping 2025 Autumn Conference</p>
     <p>Neutral Faces, Negative Reads: Limbic–Cortical Integration Shapes Efficiency in Children</p></div></div>
   <div class="row"><div class="date">Feb 2025</div><div>
     <h3>Award of Excellence</h3>
-    <p>24th National Sociology Graduate Student Conference · Seoul, Korea</p>
+    <p>24th National Sociology Graduate Student Conference</p>
     <p>From Genes to Brain: OXTR and Social Networks Shaping Neural Responses through Emotional Processing in Social Exclusion</p></div></div>
   <div class="row"><div class="date">Dec 2023</div><div>
     <h3>Award of Excellence</h3>
-    <p>The Korean Association for Survey Research 2023 Autumn Conference · Seoul, Korea</p>
+    <p>The Korean Association for Survey Research 2023 Autumn Conference</p>
     <p>Mother-Father-Child (Triad): Gender Differences in Adolescent Social Network Size</p></div></div>
 </section>
 
@@ -396,16 +402,16 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
   <div class="row"><div class="date">Mar 2026 – Present</div><div>
     <h3>Korea Advanced Institute of Science and Technology (KAIST)</h3>
     <p>Department of Bio and Brain Engineering — Master’s student (Expected Feb 2028)</p>
-    <p>Advisor: Yong Jeong · Daejeon, Korea</p></div></div>
+    <p>Advisor: Yong Jeong</p></div></div>
   <div class="row"><div class="date">Aug 2023 – Aug 2025</div><div>
     <h3>Yonsei University</h3>
     <p>Department of Sociology — M.A. in Sociology (Integrated Undergraduate &amp; Graduate Program)</p>
-    <p>Advisor: Yoosik Youm · Seoul, Korea</p>
+    <p>Advisor: Yoosik Youm</p>
     <p>Thesis: “Higher Out-Degree Centrality Amplifies Social Pain in OXTR G-Allele Carriers: A Study of Social Exclusion Combining fMRI and Socio-centric Network Data”</p></div></div>
   <div class="row"><div class="date">Mar 2020 – Aug 2023</div><div>
     <h3>Yonsei University</h3>
     <p>Department of Sociology — B.A. in Sociology</p>
-    <p>Completed Curriculum for Teaching Profession · Seoul, Korea</p></div></div>
+    <p>Completed Curriculum for Teaching Profession</p></div></div>
 </section>
 
 <section id="experience">
@@ -415,11 +421,11 @@ footer{margin:var(--s9) 0 0;padding:var(--s5) 0 var(--s7);border-top:1px solid v
     <p>Laboratory for Cognitive Neuroscience and NeuroImaging (CNI), KAIST · Daejeon, Korea</p></div></div>
   <div class="row"><div class="date">Mar 2026 – Present</div><div>
     <h3>Student Researcher</h3>
-    <p>Brain Development Imaging Lab (BDIL), KBRI · Daegu, Korea</p>
+    <p>Brain Development Imaging Lab (BDIL), Korea Brain Research Institute · Daegu, Korea</p>
     <ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Facial Expression Recognition Task (FERT)</li></ul></div></div>
   <div class="row"><div class="date">Oct 2025 – Feb 2026</div><div>
     <h3>Post-Master Researcher</h3>
-    <p>Brain Development Imaging Lab (BDIL), KBRI · Daegu, Korea</p>
+    <p>Brain Development Imaging Lab (BDIL), Korea Brain Research Institute · Daegu, Korea</p>
     <ul><li>Korean Older Adult Facial Expression Database (KOFED) project</li><li>Development of MoodSpy, a digital social cognition tool</li></ul></div></div>
   <div class="row"><div class="date">Jul 2023 – Aug 2025</div><div>
     <h3>Research Assistant</h3>
